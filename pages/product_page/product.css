@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "Nexa";
+    src: url("../../assets/Fonts/Nexa/Light.otf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: "Nexa";
+    margin: 0;
+}
+
+h1 {
+    color: #F15B39;
+}
+
+img {
+    max-height: 282px;
+    border-radius: 22px;
+}
+
+.Unicolor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.88rem;
+    padding-block: 1.88rem;
+    padding-inline: 3.75rem;
+    background-color: #F15B39;
+}
+
+.Uni_imgs {
+    display: flex;
+    gap: 1.88rem;
+}
+
+.packaging {
+    background-color: #F2F2F2;
+}
+
+.Uni_text {
+    max-width: 564px;
+    color: white;
+}
+
+.color_buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.swatch {
+    width: 70px;
+    height: 70px;
+    border-radius: 70%;
+    border: 7px solid white;
+}
+
+.blue {
+    background-color: #1E407A;
+}
+
+.green {
+    background-color: #51B2A2;
+}
+
+.pink {
+    background-color: #E990B9;
+}
+
+.red {
+    background-color: #F15B39;
+}
+
+.yellow {
+    background-color: #FECD3E;
+}
