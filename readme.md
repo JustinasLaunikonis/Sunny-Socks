@@ -8,18 +8,10 @@ We are developing a website for Sunny Socks to increase their brands digital pre
 
 ## Choice in workflow, workethics and codequality
 
-For our current workflow, the group has decided to use Figma, Visual Studio Code, OneDrive and GitHub. These were the first and only options considered, since they were suggested by both our Lecturers and Student Buddies. During project Ateliers, we help each other ensure that we all understand which issues we will divide and help each other with. We must also make sure everyone is abiding by the current Code of Conduct. All of these are examples of how we have taken steps to greatly improve and ensure a good workethic and that the quality of the code is good. We have decided to opt for ....... to ensure that we are covering most of our code with tests, which will help ensure the quality of the code.
-
-## Workhabits
-
-When working on this Project, we start by reading the Moduleboek, Instruction document, Sunny Socks project brief, and doing research on Corporate Identity. We then work in Figma, to make sure our Analysis Board is up-to-date and fully fletched out. When continuing work on this project, we are dividing the first tasks among the team members. When a task is complete, we create a description for this upcoming commit into our project branch for easy accessibility among team members, and to make sure that everyone is capable of understanding edits and modifications of the code. 
-
-## Architecture
-
-
+For our current workflow, the group has decided to use Figma, Visual Studio Code, Useberry, OneDrive and GitHub. These were the first and only options considered, since they were suggested by both our Lecturers and Study Buddies. During project Ateliers, we help each other ensure that we all understand which issues we will divide and help each other with. We must also make sure everyone is abiding by the current Code of Conduct. All of these are examples of how we have taken steps to ensure that the quality of the code is good. Each code iteration is tested excessively to make sure the code works as intended.
 
 # Extensions and versions
 
-HTML5
-CSS 3
+HTML5 |
+CSS 3 |
 PHP 8.4
