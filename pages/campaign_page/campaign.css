@@ -1,0 +1,183 @@
+@font-face {
+    font-family:"Nexa" ;
+    src: url("/Sunny-Socks/assets/Fonts/Nexa\ Light.otf");
+}
+
+body{
+    background-color: white;
+    font-family: "Nexa";
+}
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#content{
+    margin-top:10rem;
+}
+#bg{
+    position:absolute;
+    top:45vh;
+    background-color: rgb(217,217,217,100%);;
+    border-radius: 50px;
+    width:80vw;
+    height:10vh;
+}
+#bluesquare{
+    background-color: rgb(81,178,162,100%);
+    position:absolute;
+    top:30vh;
+    height:22vw;
+    width:22vw;
+    border-radius: 50px;
+    transform: rotate(45deg);
+}
+#plant{
+    position:absolute;
+    top:3vh;
+}
+#leftleaves{
+    position:absolute;
+    top:35vh;
+    left:5vw;
+}
+#rightleaves{
+    position:absolute;
+    top:35vh;
+    right:5vw;
+}
+#center{
+    position:absolute;
+    top:29vh;
+}
+#topglue{
+    position:absolute;
+    height:7vh;
+    width:22vw;
+    top:69vh;
+}
+#bluebg{
+    position:absolute;
+    top:76vh;
+    background-color:rgb(81,178,162,100%);
+    border-radius: 50px;
+    width:85vw;
+    height:65vh;
+}
+#bluebg > h1{
+    position:absolute;
+    font-size: 4rem;
+    top:0vh;
+    color:white;
+    -webkit-text-stroke: 3px black;
+}
+#Going_green_text {
+    text-align: center;
+    position:absolute;
+    top:15vh;
+    left:5vw;
+    font-size: 2.5rem;
+    color:white;
+    width:90vh;
+}
+#planet{
+    position:absolute;
+    top:90vh;
+    left:70.5vw;
+    width:auto;
+    height:40vh;
+}
+#plantbottom{
+    position:absolute;
+    top:140vh;
+    transform: rotate(180deg);
+}
+#bottomglue{
+    position:absolute;
+    top:142vh;
+    height:7vh;
+}
+#greybg1{
+    position:absolute;
+    top:149vh;
+    background-color:rgb(217,217,217,100%);
+    border-radius: 50px;
+    width:85vw;
+    height:50vh;
+}
+#greybg2{
+    position:absolute;
+    top:205vh;
+    background-color:rgb(217,217,217,100%);
+    border-radius: 50px;
+    width:85vw;
+    height:50vh;
+}
+#greybg2>p{
+    font-size:4vh;
+    text-align: center;
+    color:white;
+    position: relative;
+    top:10vh;
+}
+#header1{
+    position:absolute;
+    font-size: 4rem;
+    top:157vh;
+    left:25vw;
+    color:rgb(81,178,162,100%);
+    -webkit-text-stroke: 2px white;
+}
+#header2{
+    position:absolute;
+    font-size: 4rem;
+    top:157vh;
+    right:20vw;
+    color:rgb(81,178,162,100%);
+    -webkit-text-stroke: 2px white;
+}
+.promises{
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    top:175vh;
+    gap:2vw;
+}
+.promises div{
+    position:relative;
+    background-color:rgb(81,178,162,100%);
+    border: solid 5px white;
+    border-radius: 22px;
+    width:18vw;
+    height:50vh;
+}
+.promises h3{
+    font-size:4vh;
+    text-align: center;
+    color:white;
+}
+#promisetext{
+    font-size:2vh;
+    text-align: center;
+    color:white;
+}
+#leftbottomleaves{
+    position:absolute;
+    top:237vh;
+    left:10vw;
+}
+#rightbottomleaves{
+    position:absolute;
+    top:237vh;
+    right:10vw;
+}
+#slogan{
+    position:absolute;
+    top:260vh;
+    font-size:7vh;
+    text-align: center;
+    color:white;
+    -webkit-text-stroke: 3px rgb(81,178,162,100%);
+    font-weight: 700;
+}
