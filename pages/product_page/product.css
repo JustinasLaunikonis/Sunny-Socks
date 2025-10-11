@@ -1,80 +1,257 @@
+/*--------------------------------------------------------
+            1. Base / Variables Storage (resets)
+--------------------------------------------------------*/
+
+/* Imports */
 @font-face {
     font-family: "Nexa";
     src: url("../../assets/Fonts/Nexa/Light.otf");
 }
 
+/* Base */
 * {
     box-sizing: border-box;
 }
 
+/* Resets */
+:root {
+    /* Color variables */
+    --blue: #1E407A;
+    --green: #51B2A2;
+    --pink: #E990B9;
+    --red: #F15B39;
+    --yellow: #FECD3E;
+    --packaging-background-color: #F2F2F2;
+
+    /* Sizing */
+    --swatch-size: 70px;
+    --swatch-border: 7px solid white;
+    --radius: 1.375rem;
+
+    /* Spacings */
+    --main-spacing: 3.75rem;
+    --gap-spacing: 1.875rem;
+
+    /* Special sizings for rotation porposes */
+    --angle: 5deg;
+    --extra: calc((1 - cos(var(--angle))) * 50vw);
+}
+
+/*--------------------------------------------------------
+      2. General Properties (body) / Page Title
+--------------------------------------------------------*/
+
 body {
-    text-align: center;
-    font-family: "Nexa";
     margin: 0;
+    font-family: "Nexa";
+    text-align: center;
 }
 
 h1 {
-    color: #F15B39;
+    color: var(--red);
+    margin-block: var(--main-spacing);
 }
 
-img {
-    max-height: 282px;
-    border-radius: 22px;
+/*--------------------------------------------------------
+                 3. Layout Containers
+--------------------------------------------------------*/
+
+.content {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    /* This padding measurement is this specific because 
+    is the difference the rotation degrees create */
+    padding-block: calc(8.7vw); /* based on sin(5°) ≈ 0.087 */
 }
 
 .Unicolor {
+    /* Display and centering content */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1.88rem;
-    padding-block: 1.88rem;
-    padding-inline: 3.75rem;
-    background-color: #F15B39;
+    gap: var(--gap-spacing);
+    padding-block: var(--gap-spacing);
+    padding-inline: var(--main-spacing);
+    width: 100vw;
+    /* Other Details */
+    background-color: var(--red);
+    transform: rotate(5deg);
+    /* Testing Changes So there is no white spaces on the sides*/
+    position: relative;
+    left: -5vw;
+    width: 110vw;
+    transform-origin: center;
 }
 
 .Uni_imgs {
+    /* Changing the order on the flexbox so the text show at the left */
+    order: 1;
     display: flex;
-    gap: 1.88rem;
-}
-
-.packaging {
-    background-color: #F2F2F2;
+    gap: var(--gap-spacing);
 }
 
 .Uni_text {
+    /* Changing the order on the flexbox so the text show at the right */
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-spacing);
     max-width: 564px;
     color: white;
 }
+
+/*--------------------------------------------------------
+                      4. Images
+--------------------------------------------------------*/
+
+/*.Uni_imgs img {
+    height: auto;
+    max-height: 282px;
+    width: auto;
+    max-width: 100%;
+    max-width: 422.95px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}*/
+
+img {
+    max-height: 282px;
+    border-radius: var(--radius);
+}
+
+/* Making both blue versions of the image the default ones */
+.uni_display {
+    display: none;
+}
+
+.uni_socks_blue {
+    display: block;
+}
+
+.uni_packaging {
+    display: none;
+    background-color: var(--packaging-background-color);
+}
+
+.uni_blue {
+    display: block;
+}
+
+/*--------------------------------------------------------
+                 5. Buttons (Swatches)
+--------------------------------------------------------*/
 
 .color_buttons {
     display: flex;
     justify-content: space-between;
 }
 
-.swatch {
-    width: 70px;
-    height: 70px;
-    border-radius: 70%;
-    border: 7px solid white;
+/* Hiding the radio swatches */
+.color_buttons input[type="radio"] {
+    display: none;
 }
 
+/* Styling of the buttons which in this case are the labels */
+.color_buttons label {
+    width: var(--swatch-size);
+    height: var(--swatch-size);
+    border-radius: 50%;
+    border: var(--swatch-border);
+    cursor: pointer;
+}
+ /* Swatch colors setup */
 .blue {
-    background-color: #1E407A;
+    background-color: var(--blue);
 }
 
 .green {
-    background-color: #51B2A2;
+    background-color: var(--green);
 }
 
 .pink {
-    background-color: #E990B9;
+    background-color: var(--pink);
 }
 
 .red {
-    background-color: #F15B39;
+    background-color: var(--red);
 }
 
 .yellow {
-    background-color: #FECD3E;
+    background-color: var(--yellow);
+}
+
+/*--------------------------------------------------------
+                 6. interactivity
+--------------------------------------------------------*/
+
+/* Hiding images and bringing them when selected */
+
+/* Unicolor Green Selection */
+.Unicolor:has(#green:checked) .uni_display {
+    display: none;
+}
+
+.Unicolor:has(#green:checked) .uni_packaging { 
+    display: none; 
+}
+
+.Unicolor:has(#green:checked) .uni_socks_green {
+    display: block;
+}
+
+.Unicolor:has(#green:checked) .uni_green { 
+    display: block; 
+}
+
+/* Unicolor Pink Selection */
+.Unicolor:has(#pink:checked) .uni_display {
+    display: none;
+}
+
+.Unicolor:has(#pink:checked) .uni_packaging {
+    display: none;
+}
+
+.Unicolor:has(#pink:checked) .uni_socks_pink {
+    display: block;
+}
+
+.Unicolor:has(#pink:checked) .uni_pink{
+    display: block;
+}
+
+/* Unicolor Red Selection */
+.Unicolor:has(#red:checked) .uni_display {
+    display: none;
+}
+
+.Unicolor:has(#red:checked) .uni_packaging {
+    display: none;
+}
+
+.Unicolor:has(#red:checked) .uni_socks_red {
+    display: block;
+}
+
+.Unicolor:has(#red:checked) .uni_red {
+    display: block;
+}
+
+/* Unicolor Yellow Selection */
+.Unicolor:has(#yellow:checked) .uni_display {
+    display: none;
+}
+
+.Unicolor:has(#yellow:checked) .uni_packaging {
+    display: none;
+}
+
+.Unicolor:has(#yellow:checked) .uni_socks_yellow {
+    display: block;
+}
+
+.Unicolor:has(#yellow:checked) .uni_yellow {
+    display: block;
 }
