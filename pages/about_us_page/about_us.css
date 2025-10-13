@@ -22,7 +22,7 @@ body {
 
 .grey1 {
     position: absolute;
-    width: 90vw;
+    width: 1000px;
     height: 6rem;
     top: 280px;
     left: 70px;
@@ -57,7 +57,7 @@ body {
     /* Socks are more than just something you put on your feet, they’re little bursts of comfort and personality */
 
     position: absolute;
-    width: 90vw;
+    width: 1000px;
     height: 280px;
     left: 70px;
     top: 470px;
@@ -93,7 +93,7 @@ body {
     /* Top Grey Container */
 
     position: absolute;
-    width: 90vw;
+    width: 1000px;
     height: 600px;
     left: 70px;
     top: 830px;
@@ -115,19 +115,19 @@ img.img2 {
     position: absolute;
     top: 100px;
     left: 25px;
-    width:300px;
+    width:280px;
 }
 
 .img3 {
     position: absolute;
     top: 100px;
-    left: 360px;
-    width:680px;
+    left: 350px;
+    width:620px;
 }
 
 .grey3 {
     position: absolute;
-    width: 90vw;
+    width: 1000px;
     height: 600px;
     left: 70px;
     top: 1560px;
@@ -140,30 +140,30 @@ img.img2 {
     position: absolute;
     left: 25px;
     top: -230px;
-    width:680px;
+    width:620px;
 }
 
 .img5 {
 
     position: absolute;
     top: -230px;
-    left: 740px;
-    width:300px;
+    left: 680px;
+    width:280px;
 }
 
 .img6 {
     position: absolute;
     top: 200px;
     left: 25px;
-    width:300px;
+    width:280px;
 
 }
 
 .img7 {
     position: absolute;
     top: 200px;
-    left: 370px;
-    width:680px;
+    left: 350px;
+    width:620px;
 }
 
 .ltext {
@@ -177,7 +177,7 @@ img.img2 {
     
 
     position: absolute;
-    width: 90vw;
+    width: 1000px;
     height: 288px;
     left: 60px;
     top: 2248px;
