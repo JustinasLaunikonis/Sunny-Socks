@@ -1,0 +1,163 @@
+@font-face {
+    font-family:"Nexa" ;
+    src: url("/Sunny-Socks/assets/Fonts/Nexa\ Light.otf");
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Nexa";
+    text-align: center;
+    max-width: 100vw;
+}
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.content{
+    margin-top:10rem;
+}
+#head{
+    position:absolute;
+    top:8.5vw;
+    background-color: rgb(30,64,122,100%);
+    border-radius: 10vw;
+    width:80vw;
+    height:5vw;
+    transform: rotate(-45deg);
+}
+#greysquare{
+    top:15vw;
+    background-color: rgb(217,217,217,100%);
+    position:absolute;
+    height:22vw;
+    width:22vw;
+    border-radius: 3vw;
+    transform: rotate(45deg);
+}
+#greencircle{
+    background-color: rgb(81,178,162,100%);
+    position:absolute;
+    height:22vw;
+    width:22vw;
+    border-radius: 15vw;
+    
+}
+#earth{
+    position:absolute;
+    height:21vw;
+    width:21vw;
+    top:-8.5vw;
+}
+#leftleaf{
+    position: absolute;
+    height:5vw;
+    width:40vw;
+    left:0vw; 
+}
+#rightleaf{
+    position: absolute;
+    height:5vw;
+    width:40vw;
+    right:0vw; 
+}
+#mainpart{
+    background-color: rgb(217,217,217,100%);
+    position:absolute;
+    height:80vw;
+    width:80vw;
+    border-radius: 40vw;
+    top:38vw;
+}
+#topconector{
+    background-color: rgb(30,64,122,100%);
+    position:absolute;
+    height:10vw;
+    width:1vw;
+    top:-2.2vw;
+}
+#connectors{
+    position:absolute;
+    height:70vw;
+    width:50vw;
+    top:5vw;
+}
+#sustainability{
+    position:absolute;
+    height:30vw;
+    width:20vw;
+    top:7vw;
+    left:5vw;
+}
+#environment{
+    position:absolute;
+    height:30vw;
+    width:20vw;
+    top:7vw;
+}
+#wages{
+    position:absolute;
+    height:30vw;
+    width:20vw;
+    top:7vw;
+    right:5vw;
+}
+#profit{
+    position:absolute;
+    height:30vw;
+    width:20vw;
+    top:40vw;
+    left:17.5vw;
+}
+#jobs{
+    position:absolute;
+    height:30vw;
+    width:20vw;
+    top:40vw;
+    right:17.5vw;
+}
+#endgoal{
+    position:absolute;
+    height:auto;
+    width:80vw;
+    top:75vw;
+    right:0vw;
+}
+#endimg{
+    position:absolute;
+    height:auto;
+    width:80vw;
+    top:78vw;
+    right:0vw;
+}
+#endheader{
+    position:absolute;
+    top:76.25vw;
+    left:16vw;
+    text-align:center;
+    font-size: 2.5vw;
+    color:white;
+    height:auto;
+    width:60%;
+}
+#endtext{
+    position:absolute;
+    top:99vw;
+    left:16vw;
+    text-align:center;
+    font-size: 2vw;
+    color:white;
+    height:auto;
+    width:auto;
+}
+u{
+    color:rgb(81,178,162,100%);
+}
+
+
