@@ -20,7 +20,7 @@ During project ateliers, we divide tasks, review code as a team, and follow our 
 - Oleh Haliuk
 - Jessica Fernandes Camacho
 - Herbert Dorothea
-- Michael Boateng
+- Michael O. Boateng
 
 ## Contributions
 Each member participated in the design, development, and testing of The Sunny Socks website.
