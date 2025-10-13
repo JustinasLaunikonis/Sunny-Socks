@@ -1,0 +1,190 @@
+@font-face {
+    font-family: "Nexa";
+    src: url("..\assets\Fonts\Nexa Light.otf");
+}
+
+body {
+    font-family: "Nexa";
+    font-style: normal;
+    background-color: white;
+
+    
+}
+
+
+.mainbox{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    position: absolute;
+}
+
+.grey1 {
+    position: absolute;
+    width: 90vw;
+    height: 6rem;
+    top: 280px;
+    left: 70px;
+    background: #D9D9D9;
+    border-radius: 60px;
+}
+
+.hero {
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    left: 470px;
+    top: 250px;
+
+    background: #FECD3E;
+    border-radius: 50px;
+    transform: rotate(-45deg);
+}
+
+.img0 {
+    transform: rotate(45deg);
+    width: 210px;
+    height: 210px;
+    left: 470px;
+    top: 250px;
+    
+}
+
+.yellowt {
+    background-color: #FECD3E;
+    color: #FFFFFF;
+    /* Socks are more than just something you put on your feet, they’re little bursts of comfort and personality */
+
+    position: absolute;
+    width: 90vw;
+    height: 280px;
+    left: 70px;
+    top: 470px;
+    border-radius: 50px;
+
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 150%;
+    text-align:center;
+
+
+
+    letter-spacing: -0.011em;
+}
+
+
+.arrow {
+    /* Glue */
+
+    position: absolute;
+    width: 218px;
+    height: 141px;
+    left: 400px;
+    top: -80px;
+    transform: rotate(-45deg);
+}
+
+.img1 {
+    transform: rotate(45deg);
+}
+
+.grey2 {
+    /* Top Grey Container */
+
+    position: absolute;
+    width: 90vw;
+    height: 600px;
+    left: 70px;
+    top: 830px;
+
+    background: #D9D9D9;
+    border-radius: 50px;
+
+}
+
+.mission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap
+
+}
+
+img.img2 {
+    position: absolute;
+    top: 100px;
+    left: 25px;
+    width:300px;
+}
+
+.img3 {
+    position: absolute;
+    top: 100px;
+    left: 360px;
+    width:680px;
+}
+
+.grey3 {
+    position: absolute;
+    width: 90vw;
+    height: 600px;
+    left: 70px;
+    top: 1560px;
+
+    background: #D9D9D9;
+    border-radius: 50px;
+}
+
+.img4 {
+    position: absolute;
+    left: 25px;
+    top: -230px;
+    width:680px;
+}
+
+.img5 {
+
+    position: absolute;
+    top: -230px;
+    left: 740px;
+    width:300px;
+}
+
+.img6 {
+    position: absolute;
+    top: 200px;
+    left: 25px;
+    width:300px;
+
+}
+
+.img7 {
+    position: absolute;
+    top: 200px;
+    left: 370px;
+    width:680px;
+}
+
+.ltext {
+    /* We’re more than a sock company We’re a movement to bring joy, color, and fairness into everyday’s life. */
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    position: absolute;
+    width: 90vw;
+    height: 288px;
+    left: 60px;
+    top: 2248px;
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 150%;
+    color: #FECD3E;
+}
