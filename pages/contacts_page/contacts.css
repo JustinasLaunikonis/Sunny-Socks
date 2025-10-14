@@ -1,0 +1,217 @@
+@font-face {
+    font-family: "Nexa";
+    src: url("..\assets\Fonts\Nexa Light.otf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "nexa";
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.Messaging_Topper {
+    width: 1320px;
+    height: 374px;
+}
+
+.Connector {
+    position: relative;
+    width: 1262px;
+    height: 257px;
+    margin-top: -7px;
+    z-index: 20;
+}
+
+.blue-box {
+    width: 1320px;
+    height: 369px;
+    opacity: 1;
+    border-radius: 50px;
+    background: #1E407A;
+    margin: 0 auto;
+    margin-top: -50px;
+    position: relative;
+}
+
+.blue-box-text {
+    width: 1320px;
+    height: 369px;
+    opacity: 1;
+    color: #E990B9;
+    -webkit-text-stroke: 3px #FFFFFF;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Image_Connector {
+    position: relative;
+    width: 362px;
+    height: 362px;
+    margin-top: -50px;
+}
+
+.grey-box {
+    width: 1320px;
+    height: 165px;
+    opacity: 1;
+    border-radius: 165px;
+    background: #D9D9D9;
+    margin: 0% auto;
+    margin-top: -50px;
+}
+
+.grey-box-text {
+    position: relative;
+    width: 1320px;
+    height: 165px;
+    opacity: 1;
+    color: #1E407A;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Left_Smily_Icon {
+    position: absolute;
+    width: 162px;
+    height: 162px;
+    left: 60px;
+    bottom: 31px;
+}
+
+.Right_Smily_Icon {
+    position: absolute;
+    width: 162px;
+    height: 162px;
+    right: 60px;
+    bottom: 31px;
+}
+
+.pink-box {
+    height: 90px;
+    opacity: 1;
+    background: #E990B9;
+    margin: 0% auto;
+}
+
+.pink-box-text {
+    height: 90px;
+    opacity: 1;
+    color: #FFFFFF;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.form-box {
+    position: relative;
+    height: 952px;
+    opacity: 1;
+    background: #E990B9;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    display: flex;
+    margin-bottom: 60px;
+    margin-top: -28px;
+}
+
+.name {
+    display: flex;
+    position: absolute;
+    height: 60px;
+    width: 298px;
+    top: 50px;
+    left: 50px;
+    border-radius: 11px;
+    border: 0;
+    font-size: 24px;
+}
+
+.surname {
+    display: flex;
+    position: absolute;
+    height: 60px;
+    width: 298px;
+    top: 50px;
+    left: 373px;
+    border-radius: 11px;
+    border: 0;
+    font-size: 24px;
+}
+
+.email {
+    display: flex;
+    position: absolute;
+    height: 60px;
+    width: 298px;
+    top: 135px;
+    left: 50px;
+    border-radius: 11px;
+    border: 0;
+    font-size: 24px;
+}
+
+.phone {
+    display: flex;
+    position: absolute;
+    height: 60px;
+    width: 298px;
+    top: 135px;
+    left: 373px;
+    border-radius: 11px;
+    border: 0;
+    font-size: 24px;
+}
+
+.company {
+    display: flex;
+    position: absolute;
+    height: 60px;
+    width: 620px;
+    top: 220px;
+    left: 50px;
+    border-radius: 11px;
+    border: 0;
+    font-size: 24px;
+}
+
+.message {
+    display: flex;
+    position: absolute;
+    height: 280px;
+    width: 620px;
+    top: 305px;
+    left: 50px;
+    border-radius: 11px;
+    border: 0;
+    font-size: 24px;
+    resize: none;
+}
+
+.box {
+    position: absolute;
+    height: 379px;
+    width: 8px;
+    color:#FFFFFF;
+    top: 249px;
+    justify-content: center;
+}
