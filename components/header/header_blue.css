@@ -1,0 +1,62 @@
+header { background: #1E407A; }
+
+.header-nav-items a:nth-child(1) { color: #ffffff; }
+.header-nav-items a:nth-child(2) { color: #ffffff; }
+.header-nav-items a:nth-child(4) { color: #ffffff; }
+.header-nav-items a:nth-child(5) { color: #ffffff; }
+.header-nav-items a:nth-child(6) { color: #ffffff; }
+
+/* Hide the campaign running text on wide screens */
+.header-nav-items a:nth-child(6) { display: none; }
+
+/*
+1. Original image is ~282px tall
+2. Set container height to 225px (57px less)
+3. <background-position: center bottom> shows the bottom portion of the image
+4. <overflow: hidden> cuts off parts of image that exceeds 225px
+*/
+
+/* Campaign navigation image */
+.header-additional-element {
+    position: absolute;
+    width: 285px;
+    height: 225px;
+    right: -55px;
+    top: clamp(116.5px, 15vh, 130px);
+
+    background-image: url("../../assets/header/campaign_button.png"); 
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    
+    overflow: hidden;
+    z-index: 9999;
+    transition: background-image 0.3s ease-in-out;
+
+    cursor: pointer;
+}
+
+.header-additional-element:hover { background-image: url("../../assets/header/campaign_button_hover.png"); }
+
+
+/* ----- Mobile Phone Responsiveness ----- */
+
+@media (max-width: 992px) {
+    /* Hide the campaign image on small screens */
+    .header-additional-element { display: none; }
+
+    /* 2 column grid on mobile */
+    .header-nav-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(4px, 2vw, 12px);
+    }
+
+    .header-nav-items a:nth-child(6) {
+        display: block;
+        grid-column: 1 / -1;
+        width: 100%;
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
