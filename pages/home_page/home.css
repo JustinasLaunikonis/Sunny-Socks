@@ -1,0 +1,304 @@
+@font-face {
+    font-family:"Nexa" ;
+    src: url("../../assets/Fonts/Nexa\ Light.otf");
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Nexa";
+    text-align: center;
+}
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content{
+    margin-top:10rem;
+}
+#greybg{
+    top:15vw;
+    background-color: rgb(217,217,217,100%);
+    position:absolute;
+    height:20vw;
+    width:80vw;
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+}
+#bluesquare{
+    background-color: rgb(30,64,122,100%);
+    position:absolute;
+    height:26vw;
+    width:26vw;
+    border-radius: 3vw;
+    transform: rotate(45deg);
+}
+#bluesquare img{
+    transform:rotate(-45deg);
+    object-fit: cover;
+    width:33vw;
+    height:auto;
+}
+#smallyellowleft,#smallyellowright{
+    position: absolute;
+    background-color: #FECD3E;
+    height:2vw;
+    width:2vw;
+    border-radius: 0.5vw;
+    transform: rotate(45deg);
+}
+#smallyellowleft{
+    top:9vw;
+    left:2vw;
+}
+#smallyellowright{
+    top:9vw;
+    right:2vw;
+}
+#leftarrow1{
+    position: absolute;
+    left:16vw;
+    width:10vw;
+    height: auto;
+}
+#leftarrow2{
+    position: absolute;
+    left:11vw;
+    width:8vw;
+    height: auto;
+}
+#leftarrow3{
+    position: absolute;
+    left:6vw;
+    width:6vw;
+    height: auto;
+}
+#rightarrow1{
+    position: absolute;
+    right:16vw;
+    transform:rotate(180deg);
+    width:10vw;
+    height: auto;
+}
+#rightarrow2{
+    position: absolute;
+    right:11vw;
+    transform:rotate(180deg);
+    width:8vw;
+    height: auto;
+}
+#rightarrow3{
+    position: absolute;
+    right:6vw;
+    transform:rotate(180deg);
+    width:6vw;
+    height: auto;
+}
+#bluebg{
+    top:40vw;
+    background-color: rgb(30,64,122,100%);
+    position:absolute;
+    height:35vw;
+    width:80vw;
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: row;
+    z-index: 0;
+}
+#bluebg h1{
+    position: absolute;
+    top:5vw;
+    left:5vw;
+    color:white;
+    font-size: 3.5vw;
+    width:60%;
+}
+#bluebg > h2{
+    position: absolute;
+    top:18vw;
+    left:9vw;
+    color:white;
+    font-size: 2.25vw;
+    width:50%;
+}
+#bluebg img{
+    position: absolute;
+    right:5vw;
+    top:8vw;
+    width:23vw;
+    height:auto;
+}
+#productbutton{
+    background-color: #FECD3E;
+    position: absolute;
+    left:9vw;
+    top:27vw;
+    width:20vw;
+    height:6vw;
+    border-radius:1vw;
+}
+#productbuttoninside{
+    background-color: #FECD3E;
+    position: absolute;
+    left:9.5vw;
+    top:27.5vw;
+    width:19vw;
+    height:5vw;
+    border-radius:1vw;
+    border:white 0.5vw solid;
+}
+#productbuttoninside h2{
+    position: absolute;
+    top:1vw;
+    left:0vw;
+    color:white;
+    font-size: 1.6vw;
+    width:100%;
+}
+#campaignbutton{
+    background-color: white;
+    position: absolute;
+    left:30vw;
+    top:27vw;
+    width:20vw;
+    height:6vw;
+    border-radius:1vw;
+}
+#campaignbuttoninside{
+    background-color: white;
+    position: absolute;
+    left:30.5vw;
+    top:27.5vw;
+    width:19vw;
+    height:5vw;
+    border-radius:1vw;
+    border:#FECD3E 0.5vw solid;
+}
+#campaignbuttoninside h2{
+    position: absolute;
+    top:0vw;
+    left:0vw;
+    color:#FECD3E;
+    font-size: 1.6vw;
+    width:100%;
+}
+
+
+#bottomglue{
+    position:absolute;
+    top:-5vw;
+    height:10.7vw;
+    width:26vw;
+}
+.promise{
+    top:88vw;
+}
+#greybg1{
+    position:absolute;
+    top:80vw;
+    background-color:rgb(217,217,217,100%);
+    border-radius: 3vw;
+    width:85vw;
+    height:27.5vw;
+}
+#greybg1>h1{
+    font-size:4vw;
+    text-align: center;
+    color:white;
+    position: relative;
+    width:80%;
+    top:-20%;
+    left:0%;
+    color:rgb(30,64,122,100%);
+}
+#greybg2{
+    position:absolute;
+    top:112.5vw;
+    background-color:rgb(217,217,217,100%);
+    border-radius: 3vw;
+    width:85vw;
+    height:30vw;
+}
+#greybg2>h2{
+    font-size:3.5vw;
+    text-align: center;
+    color:rgb(30,64,122,100%);
+    position: relative;
+    width:80%;
+    top:20%;
+    left:-15%;
+    text-shadow: -0.05vw -0.05vw 0 white, 0.05vw -0.05vw 0 white, -0.05vw 0.05vw 0 white, 0.05vw 0.05vw 0 white;
+}
+#greybg2 b{
+    color: #FECD3E;
+}
+
+.reasons{
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    top:92.5vw;
+    gap:2vw;
+}
+.reasons div{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    background-color:rgb(30,64,122,100%);
+    border: solid 0.5vw white;
+    border-radius: 2vw;
+    width:22vw;
+    height:30vw;
+}
+.reasons img{
+    
+    top:-3vw;
+    width:50%;
+    height:auto;
+}
+.reasons h1{
+    margin-top:2vw;
+    font-size:3vw;
+    text-align: center;
+    color:#FECD3E;
+}
+.reasons h2{
+    margin-top:2vw;
+    font-size:2vw;
+    text-align: center;
+    color:white;
+}
+#aboutusbutton{
+    background-color: #FECD3E;
+    position: absolute;
+    right:9vw;
+    top:18vw;
+    width:20vw;
+    height:6vw;
+    border-radius:1vw;
+}
+#aboutusbuttoninside{
+    background-color: #FECD3E;
+    position: absolute;
+    right:9.5vw;
+    top:18.5vw;
+    width:19vw;
+    height:5vw;
+    border-radius:1vw;
+    border:white 0.5vw solid;
+}
+#aboutusbuttoninside h2{
+    position: absolute;
+    top:1vw;
+    left:0vw;
+    color:white;
+    font-size: 1.6vw;
+    width:100%;
+}
