@@ -13,12 +13,12 @@
             <img src="../../assets/Contact Page Assets/Connector.png" alt="Connector" class="Connector">
         </div>
         <div class="blue-box">
+            <img src="../../assets/Contact Page Assets/Left_Smily_Icon.png" alt="Left_Smily_Icon" class="Left_Smily_Icon">
             <div class="blue-box-text">
-                <img src="../../assets/Contact Page Assets/Left_Smily_Icon.png" alt="Left_Smily_Icon" class="Left_Smily_Icon">
                     Interested to get a hand in our colourful socks? <br>
                     Don't hesitate to contact us!
-                <img src="../../assets/Contact Page Assets/Right_Smily_Icon.png" alt="Right_Smily_Icon" class="Right_Smily_Icon">
             </div>
+            <img src="../../assets/Contact Page Assets/Right_Smily_Icon.png" alt="Right_Smily_Icon" class="Right_Smily_Icon">
         </div>
         <div>
             <img src="../../assets/Contact Page Assets/Image_Connector.png" alt="Image_Connector" class="Image_Connector">
