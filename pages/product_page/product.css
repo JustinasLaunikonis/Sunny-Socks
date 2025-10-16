@@ -34,6 +34,7 @@
 
     /* Special sizings for rotation porposes */
     --angle: 5deg;
+    --negative-angle: -5deg;
     --extra: calc((1 - cos(var(--angle))) * 50vw);
 }
 
@@ -60,12 +61,14 @@ h1 {
     width: 100vw;
     overflow: hidden;
     position: relative;
-    /* This padding measurement is this specific because 
-    is the difference the rotation degrees create */
-    padding-block: calc(8.7vw); /* based on sin(5°) ≈ 0.087 */
+    /* This padding measurement is in view width so it
+    doesn't change with the height but with the width of
+    the screen */
+    padding-block: 5vw;
 }
 
-.Unicolor {
+/* Unicolor and Stripes Section */
+.Unicolor, .Stripes {
     /* Display and centering content */
     display: flex;
     justify-content: center;
@@ -74,53 +77,61 @@ h1 {
     gap: var(--gap-spacing);
     padding-block: var(--gap-spacing);
     padding-inline: var(--main-spacing);
-    width: 100vw;
     /* Other Details */
     background-color: var(--red);
-    transform: rotate(5deg);
-    /* Testing Changes So there is no white spaces on the sides*/
+    /* Properties related to eliminating white spaces on the sides*/
     position: relative;
     left: -5vw;
     width: 110vw;
-    transform-origin: center;
+}
+
+.Unicolor {
+    transform: rotate(var(--angle));
+    /* This margin is specific because of testings I did
+    which gave the perfect result in this sizing */
+    margin-bottom: 8.8vw;
+}
+
+.Stripes {
+    transform: rotate(var(--negative-angle));
+}
+
+.Uni_imgs, .Stripes_Imgs {
+    display: flex;
+    gap: var(--gap-spacing);
 }
 
 .Uni_imgs {
     /* Changing the order on the flexbox so the text show at the left */
     order: 1;
+}
+
+.Uni_text, .Stripes_Text {
     display: flex;
+    flex-direction: column;
     gap: var(--gap-spacing);
+    color: white;
+    /* Max-width measurement extracted from Figma design
+    to limitate expansion of the boxes */
+    max-width: 564px;
 }
 
 .Uni_text {
     /* Changing the order on the flexbox so the text show at the right */
     order: 2;
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-spacing);
-    max-width: 564px;
-    color: white;
 }
 
 /*--------------------------------------------------------
                       4. Images
 --------------------------------------------------------*/
 
-/*.Uni_imgs img {
-    height: auto;
-    max-height: 282px;
-    width: auto;
-    max-width: 100%;
-    max-width: 422.95px;
-    object-fit: contain;
-    transition: all 0.3s ease;
-}*/
-
+/* General images properties changes */
 img {
     max-height: 282px;
     border-radius: var(--radius);
 }
 
+/* Unicolor Section*/
 /* Making both blue versions of the image the default ones */
 .uni_display {
     display: none;
@@ -136,6 +147,25 @@ img {
 }
 
 .uni_blue {
+    display: block;
+}
+
+/* Stripes Section*/
+/* Making both blue versions of the image the default ones */
+.stripes_display {
+    display: none;
+}
+
+.stripes_socks_blue {
+    display: block;
+}
+
+.stripes_packaging {
+    display: none;
+    background-color: var(--packaging-background-color);
+}
+
+.stripes_blue {
     display: block;
 }
 
@@ -189,69 +219,91 @@ img {
 /* Hiding images and bringing them when selected */
 
 /* Unicolor Green Selection */
-.Unicolor:has(#green:checked) .uni_display {
+.Unicolor:has(#green:checked) .uni_display, 
+.Unicolor:has(#green:checked) .uni_packaging {
     display: none;
 }
 
-.Unicolor:has(#green:checked) .uni_packaging { 
-    display: none; 
-}
-
-.Unicolor:has(#green:checked) .uni_socks_green {
+.Unicolor:has(#green:checked) .uni_socks_green,
+.Unicolor:has(#green:checked) .uni_green {
     display: block;
 }
 
-.Unicolor:has(#green:checked) .uni_green { 
-    display: block; 
-}
-
 /* Unicolor Pink Selection */
-.Unicolor:has(#pink:checked) .uni_display {
-    display: none;
-}
-
+.Unicolor:has(#pink:checked) .uni_display, 
 .Unicolor:has(#pink:checked) .uni_packaging {
     display: none;
 }
 
-.Unicolor:has(#pink:checked) .uni_socks_pink {
-    display: block;
-}
-
-.Unicolor:has(#pink:checked) .uni_pink{
+.Unicolor:has(#pink:checked) .uni_socks_pink,
+.Unicolor:has(#pink:checked) .uni_pink {
     display: block;
 }
 
 /* Unicolor Red Selection */
-.Unicolor:has(#red:checked) .uni_display {
-    display: none;
-}
-
+.Unicolor:has(#red:checked) .uni_display, 
 .Unicolor:has(#red:checked) .uni_packaging {
     display: none;
 }
 
-.Unicolor:has(#red:checked) .uni_socks_red {
-    display: block;
-}
-
+.Unicolor:has(#red:checked) .uni_socks_red, 
 .Unicolor:has(#red:checked) .uni_red {
     display: block;
 }
 
 /* Unicolor Yellow Selection */
-.Unicolor:has(#yellow:checked) .uni_display {
-    display: none;
-}
-
+.Unicolor:has(#yellow:checked) .uni_display,
 .Unicolor:has(#yellow:checked) .uni_packaging {
     display: none;
 }
 
-.Unicolor:has(#yellow:checked) .uni_socks_yellow {
+.Unicolor:has(#yellow:checked) .uni_socks_yellow, 
+.Unicolor:has(#yellow:checked) .uni_yellow {
     display: block;
 }
 
-.Unicolor:has(#yellow:checked) .uni_yellow {
+/* ------------------------------------------------ */
+
+/* Stripes Green Selection */
+.Stripes:has(#st_green:checked) .stripes_display, 
+.Stripes:has(#st_green:checked) .stripes_packaging {
+    display: none;
+}
+
+.Stripes:has(#st_green:checked) .stripes_socks_green, 
+.Stripes:has(#st_green:checked) .stripes_green {
+    display: block;
+}
+
+/* Stripes Pink Selection */
+.Stripes:has(#st_pink:checked) .stripes_display, 
+.Stripes:has(#st_pink:checked) .stripes_packaging {
+    display: none;
+}
+
+.Stripes:has(#st_pink:checked) .stripes_socks_pink, 
+.Stripes:has(#st_pink:checked) .stripes_pink {
+    display: block;
+}
+
+/* Stripes Red Selection */
+.Stripes:has(#st_red:checked) .stripes_display, 
+.Stripes:has(#st_red:checked) .stripes_packaging {
+    display: none;
+}
+
+.Stripes:has(#st_red:checked) .stripes_socks_red, 
+.Stripes:has(#st_red:checked) .stripes_red {
+    display: block;
+}
+
+/* Stripes Yellow Selection */
+.Stripes:has(#st_yellow:checked) .stripes_display, 
+.Stripes:has(#st_yellow:checked) .stripes_packaging {
+    display: none;
+}
+
+.Stripes:has(#st_yellow:checked) .stripes_socks_yellow, 
+.Stripes:has(#st_yellow:checked) .stripes_yellow {
     display: block;
 }
