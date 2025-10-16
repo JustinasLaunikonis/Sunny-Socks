@@ -38,10 +38,6 @@ main::after {
     content: "";
     display: block;
 
-    /*
-    Added header offset - JL
-    (was top:170vw)
-    */
     height: calc(170vw + var(--header-offset));
 }
 
