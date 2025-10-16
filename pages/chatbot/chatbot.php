@@ -1,22 +1,80 @@
-
-
-
 <?php
-if (isset($_POST['message'])) {
-    $msg = strtolower(trim($_POST['message']));
+session_start();
 
-    if (strpos($msg, 'hello') !== false || strpos($msg, 'hi') !== false) {
-        echo "Hey there! 👋 Welcome to Sunny Socks!";
-    } elseif (strpos($msg, 'price') !== false) {
-        echo "Our socks start at €5 per pair.";
-    } elseif (strpos($msg, 'shipping') !== false) {
-        echo "We offer free shipping for orders over €20.";
-    } elseif (strpos($msg, 'return') !== false) {
-        echo "You can return any unused socks within 14 days of purchase.";
+if (!isset($_SESSION['chat_history'])) {
+    $_SESSION['chat_history'] = [];
+}
+
+if (isset($_POST['clear'])) {
+    $_SESSION['chat_history'] = [];
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit;
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['message'])) {
+    $user_input = strtolower(trim($_POST['message']));
+    $response = "";
+
+    // 🧦 Funny chatbot logic
+    if ($user_input == "hello" || $user_input == "hi") {
+        $response = "Hey there ! Ready to talk about socks that make your feet feel like royalty?";
+    } elseif ($user_input == "how are you") {
+        $response = "I’m doing amazing — no holes in my logic or my socks today . You?";
+    } elseif ($user_input == "bye") {
+        $response = "Goodbye!  Don’t forget — life’s too short for boring socks!";
+    } elseif ($user_input == "what sizes do your socks come in?") {
+        $response = "We’ve got 35–38, 39–42, and 43–46 — basically, if you’ve got feet, we’ve got socks.";
+    } elseif ($user_input == "do your socks shrink after washing?") {
+        $response = "Nope! They stay loyal — unlike that one person who said they’d text back .";
+    } elseif ($user_input == "do you offer custom designs or personalized socks?") {
+        $response = "Of course! We can print your name, your logo, or even your pet’s face. Imagine your cat judging you from your ankles .";
+    } elseif ($user_input == "are your socks eco-friendly or sustainable?") {
+        $response = "Totally, Our bamboo socks are greener than a salad at a yoga retreat.";
     } else {
-        echo "I'm SunnyBot! ☀️ Ask me about prices, shipping, or returns.";
+        $response = "Hmm... I didn’t quite get that. Try asking about sizes, materials, or custom socks!";
     }
-} else {
-    echo "No message received.";
+
+    // 🧠 Store each message pair together (user + bot)
+    $_SESSION['chat_history'][] = [
+        "user" => $user_input,
+        "bot" => $response
+    ];
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny Socks Chatbot</title>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="chat-box" id="chat-box">
+        <?php foreach ($_SESSION['chat_history'] as $chat): ?>
+            <!-- User message first -->
+            <div class="message user-msg">
+                <strong>You:</strong> <?= htmlspecialchars($chat['user']) ?>
+            </div>
+            <!-- Bot reply below -->
+            <div class="message bot-msg">
+                <strong>Dummy:</strong> <?= htmlspecialchars($chat['bot']) ?>
+            </div>
+        <?php endforeach; ?>
+        <p id="typing-indicator" class="typing" style="display:none;">🤖 Dummy is typing...</p>
+    </div>
+
+    <form method="post" id="chat-form">
+        <textarea name="message" placeholder="Say something..." required></textarea>
+        <button type="submit">Send</button>
+        <button type="submit" name="clear" value="1" class="clear-btn">🧹 Clear</button>
+    </form>
+</div>
+
+<script src="chatbot.js"></script>
+
+</body>
+</html>
