@@ -1,0 +1,8 @@
+header { background: #51B2A2; }
+
+.header-nav-items a:nth-child(1) { color: #ffffff; }
+.header-nav-items a:nth-child(2) { color: #ffffff; }
+.header-nav-items a:nth-child(4) { color: #ffffff; }
+.header-nav-items a:nth-child(5) { color: #ffffff; }
+
+.header-nav-items a:nth-child(6) { display: none; }

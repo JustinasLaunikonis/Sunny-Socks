@@ -1,6 +1,6 @@
 @font-face {
     font-family:"Nexa" ;
-    src: url("/Sunny-Socks/assets/Fonts/Nexa\ Light.otf");
+    src: url("/Sunny-Socks/assets/Fonts/Nexa/Light.otf");
 }
 * {
   margin: 0;
@@ -11,22 +11,52 @@ body{
     margin: 0;
     font-family: "Nexa";
     text-align: center;
+
+    /* Made page use a column flex layout, now footer can be at the bottom - JL */
+    display: flex;
+    flex-direction: column;
+
+    /* CSS variable to offset content below header - JL*/
+    --header-offset: clamp(140px, 11vh, 150px);
 }
-div{
+
+/* Header appears at the very top at all times - JL */
+header { z-index: 10000; }
+
+/* 
+Was <div> now <.content div>
+Would break page layout (especially the footer) - JL
+*/
+.content div {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-
 }
-.content{
-    margin-top:10rem;
+
+/* Prevents footer from overlapping with content. - JL */
+main::after {
+    content: "";
+    display: block;
+
+    height: calc(170vw + var(--header-offset));
 }
 
 #bg{
     position:absolute;
-    top:25vw;
-    background-color: rgb(217,217,217,100%);;
+
+    /*
+    Added header offset - JL
+    (was top:25vw)
+    */
+    top: calc(25vw + var(--header-offset));
+
+    /*
+    Centered Top Part horizontally - JL
+    (added left:50% + translateX)
+    */
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: rgb(217,217,217,100%);
     border-radius: 10vw;
     width:80vw;
     height:10vw;
@@ -78,7 +108,19 @@ div{
 }
 #bluebg{
     position:absolute;
-    top:45vw;
+
+    /*
+    Added header offset - JL
+    (was top:45vw)
+    */
+    top: calc(45vw + var(--header-offset));
+
+    /*
+    Centered 'Going Green' horizontally - JL
+    (added left:50% + translateX)
+    */
+    left: 50%;
+    transform: translateX(-50%);
     background-color:rgb(81,178,162,100%);
     border-radius: 5vw;
     width:85vw;
@@ -122,11 +164,20 @@ p {
     width:26vw;
 }
 .promise{
-    top:88vw;
+    /*
+    Added header offset - JL
+    (was top:88vw)
+    */
+    top: calc(88vw + var(--header-offset));
 }
 #greybg1{
     position:absolute;
-    top:88vw;
+
+    /*
+    Added header offset - JL
+    (was top:88vw)
+    */
+    top: calc(88vw + var(--header-offset));
     background-color:rgb(217,217,217,100%);
     border-radius: 3vw;
     width:85vw;
@@ -134,7 +185,12 @@ p {
 }
 #greybg2{
     position:absolute;
-    top:117.5vw;
+
+    /*
+    Added header offset - JL
+    (was top:117.5vw)
+    */
+    top: calc(117.5vw + var(--header-offset));
     background-color:rgb(217,217,217,100%);
     border-radius: 3vw;
     width:85vw;
@@ -169,7 +225,12 @@ p {
     display: flex;
     flex-direction: row;
     position:absolute;
-    top:100vw;
+
+    /*
+    Added header offset - JL
+    (was top:100vw)
+    */
+    top: calc(100vw + var(--header-offset));
     gap:2vw;
 }
 .promises div{
@@ -201,21 +262,36 @@ p {
 }
 #leftbottomleaves{
     position:absolute;
-    top:137vw;
+
+    /*
+    Added header offset - JL
+    (was top:137vw)
+    */
+    top: calc(137vw + var(--header-offset));
     left:10vw;
     width:20vw;
     height:auto;
 }
 #rightbottomleaves{
     position:absolute;
-    top:137vw;
+
+    /*
+    Added header offset - JL
+    (was top:137vw)
+    */
+    top: calc(137vw + var(--header-offset));
     right:10vw;
     width:20vw;
     height:auto;
 }
 #slogan{
     position:absolute;
-    top:150vw;
+
+    /*
+    Added header offset - JL
+    (was top:150vw)
+    */
+    top: calc(150vw + var(--header-offset));
     font-size:4vw;
     text-align: center;
     color:white;
