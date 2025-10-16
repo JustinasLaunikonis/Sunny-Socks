@@ -1,6 +1,6 @@
 @font-face {
     font-family:"Nexa" ;
-    src: url("../../assets/Fonts/Nexa\ Light.otf");
+    src: url("../../assets/Fonts/Nexa/Light.otf");
 }
 * {
   margin: 0;
@@ -11,18 +11,53 @@ body{
     margin: 0;
     font-family: "Nexa";
     text-align: center;
+
+    /* Made page use a column flex layout, now footer can be at the bottom - JL */
+    display: flex;
+    flex-direction: column;
+
+    /* CSS variable to offset content below header - JL*/
+    --header-offset: clamp(110px, 9vh, 120px);
 }
-div{
+
+/* Header appears at the very top at all times - JL */
+header { z-index: 10000; }
+
+/* 
+Was <div> now <.content div>
+Would break page layout (especially the footer) - JL
+*/
+.content div {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
+
+/* Prevents footer from overlapping with content. - JL */
+main::after {
+    content: "";
+    display: block;
+
+    height: calc(140vw + var(--header-offset));
+}
+
 .content{
     margin-top:10rem;
 }
 #greybg{
-    top:15vw;
+    /*
+    Added header offset - JL
+    (was top:15vw)
+    */
+    top: calc(15vw + var(--header-offset));
+
+    /*
+    Centered Top Part horizontally - JL
+    (added left:50% + translateX)
+    */
+    left: 50%;
+    transform: translateX(-50%); 
+
     background-color: rgb(217,217,217,100%);
     position:absolute;
     height:20vw;
@@ -102,7 +137,19 @@ div{
     height: auto;
 }
 #bluebg{
-    top:40vw;
+    /*
+    Added header offset - JL
+    (was top:40vw)
+    */
+    top: calc(40vw + var(--header-offset));
+
+    /*
+    Centered 'Going Green' horizontally - JL
+    (added left:50% + translateX)
+    */
+    left: 50%;
+    transform: translateX(-50%);
+
     background-color: rgb(30,64,122,100%);
     position:absolute;
     height:35vw;
@@ -202,7 +249,13 @@ div{
 }
 #greybg1{
     position:absolute;
-    top:80vw;
+
+    /*
+    Added header offset - JL
+    (was top:80vw)
+    */
+    top: calc(80vw + var(--header-offset));
+    
     background-color:rgb(217,217,217,100%);
     border-radius: 3vw;
     width:85vw;
@@ -220,7 +273,13 @@ div{
 }
 #greybg2{
     position:absolute;
-    top:112.5vw;
+
+    /*
+    Added header offset - JL
+    (was top:112.5vw)
+    */
+    top: calc(112.5vw + var(--header-offset));
+
     background-color:rgb(217,217,217,100%);
     border-radius: 3vw;
     width:85vw;
@@ -244,7 +303,13 @@ div{
     display: flex;
     flex-direction: row;
     position:absolute;
-    top:92.5vw;
+
+    /*
+    Added header offset - JL
+    (was top:92.5vw)
+    */
+    top: calc(92.5vw + var(--header-offset));
+
     gap:2vw;
 }
 .reasons div{
