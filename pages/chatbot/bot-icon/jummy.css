@@ -1,0 +1,33 @@
+
+
+
+
+
+.boticon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background-color: #ff9800;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.boticon:hover {
+    transform: scale(1.1);
+    background-color: #ffa733;
+}
+
+.boticon img {
+    width: 40px;
+    height: 40px;
+}
+
+
