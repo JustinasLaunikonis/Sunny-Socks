@@ -11,30 +11,37 @@ if (isset($_POST['clear'])) {
     exit;
 }
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['message'])) {
-    $user_input = strtolower(trim($_POST['message']));
+    // Clean user input: remove extra spaces, tabs, and newlines
+    $user_input = strtolower(trim(preg_replace('/\s+/', ' ', $_POST['message'])));
     $response = "";
 
-    // 🧦 Funny chatbot logic
-    if ($user_input == "hello" || $user_input == "hi") {
-        $response = "Hey there ! Ready to talk about socks that make your feet feel like royalty?";
-    } elseif ($user_input == "how are you") {
-        $response = "I’m doing amazing — no holes in my logic or my socks today . You?";
-    } elseif ($user_input == "bye") {
-        $response = "Goodbye!  Don’t forget — life’s too short for boring socks!";
-    } elseif ($user_input == "what sizes do your socks come in?") {
-        $response = "We’ve got 35–38, 39–42, and 43–46 — basically, if you’ve got feet, we’ve got socks.";
-    } elseif ($user_input == "do your socks shrink after washing?") {
-        $response = "Nope! They stay loyal — unlike that one person who said they’d text back .";
-    } elseif ($user_input == "do you offer custom designs or personalized socks?") {
-        $response = "Of course! We can print your name, your logo, or even your pet’s face. Imagine your cat judging you from your ankles .";
-    } elseif ($user_input == "are your socks eco-friendly or sustainable?") {
-        $response = "Totally, Our bamboo socks are greener than a salad at a yoga retreat.";
-    } else {
-        $response = "Hmm... I didn’t quite get that. Try asking about sizes, materials, or custom socks!";
-    }
+  
+// 🧦 Funny chatbot logic
+if (strpos($user_input, "hello") !== false || strpos($user_input, "hi") !== false) {
+    $response = "Hey there! Ready to talk about socks that make your feet feel like royalty?";
+} elseif (strpos($user_input, "how are you") !== false) {
+    $response = "I’m doing amazing — no holes in my logic or my socks today. You?";
+} elseif (strpos($user_input, "bye") !== false) {
+    $response = "Goodbye! Don’t forget — life’s too short for boring socks!";
+} elseif (strpos($user_input, "sizes") !== false) {
+    $response = "We’ve got 35–38, 39–42, and 43–46 — basically, if you’ve got feet, we’ve got socks.";
+} elseif (strpos($user_input, "shrink") !== false) {
+    $response = "Nope! They stay loyal — unlike that one person who said they’d text back.";
+} elseif (strpos($user_input, "custom") !== false || strpos($user_input, "personalized") !== false) {
+    $response = "Of course! We can print your name, your logo, or even your pet’s face. Imagine your cat judging you from your ankles.";
+} elseif (strpos($user_input, "eco") !== false || strpos($user_input, "sustainable") !== false) {
+    $response = "Totally! Our bamboo socks are greener than a salad at a yoga retreat.";
+} else {
+    $response = "Hmm... I didn’t quite get that. Try asking about sizes, materials, or custom socks!";
+}
 
-    // 🧠 Store each message pair together (user + bot)
+
+
+
+
+    //  Store each message pair together (user + bot)
     $_SESSION['chat_history'][] = [
         "user" => $user_input,
         "bot" => $response
@@ -64,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['message'])) {
                 <strong>Dummy:</strong> <?= htmlspecialchars($chat['bot']) ?>
             </div>
         <?php endforeach; ?>
-        <p id="typing-indicator" class="typing" style="display:none;">🤖 Dummy is typing...</p>
+      <!--  <p id="typing-indicator" class="typing" style="display:none;">🤖 Dummy is typing...</p> -->
     </div>
 
     <form method="post" id="chat-form">
