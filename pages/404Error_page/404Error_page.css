@@ -1,0 +1,137 @@
+/*--------------------------------------------------------
+            1. Base / Variables Storage (resets)
+--------------------------------------------------------*/
+
+/* Imports */
+@font-face {
+    font-family: "Nexa";
+    src: url("../../assets/Fonts/Nexa/Light.otf");
+}
+
+/* Base */
+* {
+    box-sizing: border-box;
+}
+
+/* Resets */
+:root {
+    /* Color variables */
+    --blue: #1E407A;
+    --green: #51B2A2;
+    --pink: #E990B9;
+    --red: #F15B39;
+    --yellow: #FECD3E;
+
+    /* Sizing */
+    --radius: 1.375rem;
+    --scale: 0.7071;
+
+    /* Spacings */
+    --main-spacing: 3.75rem;
+    --gap-spacing: 1.875rem;
+
+    /* Special sizings for rotation porposes */
+    --angle: 45deg;
+}
+
+/*--------------------------------------------------------
+      2. General Properties (body) / Main Properties
+--------------------------------------------------------*/
+
+body {
+    margin: 0;
+    font-family: "Nexa";
+    color: white;
+    text-align: center;
+}
+
+.MainContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+    /* place-items: center; */
+}
+
+/*--------------------------------------------------------
+      3. General Properties (body) / Main Properties
+--------------------------------------------------------*/
+
+.leftContent {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: var(--gap-spacing);
+}
+
+.imageWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redBox {
+    background-color: var(--red);
+    border-radius: var(--radius);
+    transform: rotate(var(--angle)) scale(var(--scale));
+    z-index: 2;
+    width: 60%;
+    aspect-ratio: 1 / 1;
+}
+
+.imageWrapper img {
+    position: absolute;
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    z-index: 3;
+}
+
+.yellowBox {
+    position: absolute;
+    background-color: var(--yellow);
+    width: 100%;
+    height: 25%;
+    border-radius: var(--radius);
+    z-index: 1;
+}
+
+.sockErrorText {
+    position: absolute;
+    /* Centering text */
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 30px;
+    align-items: center;
+    /* ensures it doesn't block clicks */
+    z-index: 4;
+    font-weight: 700;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.sock, .found {
+    color: var(--red);
+}
+
+.not {
+    position: absolute;
+    top: 8%;
+    z-index: 5;
+    font-weight: 700;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: var(--yellow);
+}
+
+.textBox {
+    background-color: var(--yellow);
+    border-radius: var(--radius);
+    padding: var(--gap-spacing);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+
+    margin-top: -3rem;
+}
