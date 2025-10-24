@@ -1,188 +1,227 @@
+/*-----------------------------
+  Fonts
+------------------------------*/
 @font-face {
     font-family: "Nexa";
-    src: url("..\assets\Fonts\Nexa Light.otf");
+    src: url("../assets/Fonts/Nexa Light.otf");
+}
+
+/*-----------------------------
+  Global Reset
+------------------------------*/
+* {
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: "Nexa";
-    font-style: normal;
     background-color: white;
-
-    
-}
-
-
-.mainbox{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    position: absolute;
-}
-
-.grey1 {
-    position: absolute;
-    width: 1000px;
-    height: 6rem;
-    top: 310px;
-    left: 70px;
-    background: #D9D9D9;
-    border-radius: 60px;
-}
-
-.hero {
-    position: absolute;
-    width: 210px;
-    height: 210px;
-    left: 470px;
-    top: 250px;
-
-    background: #FECD3E;
-    border-radius: 50px;
-    transform: rotate(-45deg);
-}
-
-.img0 {
-    transform: rotate(45deg);
-    width: 210px;
-    height: 210px;
-    left: 470px;
-    top: 250px;
-    
-}
-
-.yellowt {
-    background-color: #FECD3E;
-    color: #FFFFFF;
-    /* Socks are more than just something you put on your feet, they’re little bursts of comfort and personality */
-
-    position: absolute;
-    width: 1000px;
-    height: 280px;
-    left: 70px;
-    top: 470px;
-    border-radius: 50px;
-
-    font-weight: 700;
-    font-size: 55px;
-    line-height: 150%;
-    text-align:center;
-
-    letter-spacing: -0.011em;
-}
-
-
-.arrow {
-    /* Glue */
-
-    position: absolute;
-    width: 218px;
-    height: 141px;
-    left: 400px;
-    top: -80px;
-    transform: rotate(-45deg);
-}
-
-.img1 {
-    transform: rotate(45deg);
-}
-
-.grey2 {
-    /* Top Grey Container */
-
-    position: absolute;
-    width: 1000px;
-    height: 600px;
-    left: 70px;
-    top: 830px;
-
-    background: #D9D9D9;
-    border-radius: 50px;
-
-}
-
-.mission {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap:wrap
-
-}
-
-img.img2 {
-    position: absolute;
-    top: 100px;
-    left: 25px;
-    width:280px;
-}
-
-.img3 {
-    position: absolute;
-    top: 100px;
-    left: 350px;
-    width:620px;
-}
-
-.grey3 {
-    position: absolute;
-    width: 1000px;
-    height: 600px;
-    left: 70px;
-    top: 1500px;
-
-    background: #D9D9D9;
-    border-radius: 50px;
-}
-
-.img4 {
-    position: absolute;
-    left: 25px;
-    top: -190px;
-    width:620px;
-}
-
-.img5 {
-
-    position: absolute;
-    top: -190px;
-    left: 680px;
-    width:280px;
-}
-
-.img6 {
-    position: absolute;
-    top: 200px;
-    left: 25px;
-    width:280px;
-
-}
-
-.img7 {
-    position: absolute;
-    top: 200px;
-    left: 350px;
-    width:620px;
-}
-
-.ltext {
-    /* We’re more than a sock company We’re a movement to bring joy, color, and fairness into everyday’s life. */
-
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+}
 
+/*-----------------------------
+  Main Container
+------------------------------*/
+main::after {
+    content: "";
+    display: block;
+    height: calc(250vw); /* ensures footer space */
+}
+
+.mainbox {
+    position: relative;
+    width: 90vw;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/*-----------------------------
+  Grey Top Bar
+------------------------------*/
+.grey1 {
     position: absolute;
-    width: 1000px;
-    height: 288px;
-    left: 60px;
-    top: 2248px;
+    top: 24vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    height: 10vw;
+    background: #D9D9D9;
+    border-radius: 5vw;
+}
 
-    text-align: center;
+/*-----------------------------
+  Hero Circle
+------------------------------*/
+
+
+
+/* Hero square */
+.hero {
+    position: relative;        
+    top: 19vw;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg); 
+    width: 21vw;
+    aspect-ratio: 1 / 1;      
+    background: #FECD3E;
+    border-radius: 6vw;        
+}
+
+/* Image centered inside hero */
+.img0 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;               /* adjust as needed */
+    height: 90%;              /* ensures it fills most of the hero */
+    transform: translate(-50%, -50%) rotate(-45deg); 
+}
+
+
+/*-----------------------------
+  Yellow Text Box
+------------------------------*/
+.yellowt {
+    position: absolute;
+    top: 41vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    padding: 2vw;
+    background-color: #FECD3E;
+    color: #FFFFFF;
+    border-radius: 5vw;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 4vw;
+    line-height: 150%;
+    text-align: center;
+}
+
+/*-----------------------------
+  Glue / Arrow
+------------------------------*/
+.arrow {
+    position: absolute;
+    top: -7vw;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+    width: 20vw;
+}
+
+
+.img1 {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/*-----------------------------
+  Grey Sections
+------------------------------*/
+.grey2, .grey3 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    height:50vw;
+    background: #D9D9D9;
+    border-radius: 5vw;
+    padding: 2vw 0;
+}
+
+/* Grey2 Position */
+.grey2 {
+    top: 70vw;
+}
+
+/* Grey3 Position */
+.grey3 {
+    top: 125vw;
+}
+
+/*-----------------------------
+  Mission Images (img2 & img3)
+------------------------------*/
+.mission-images {
+    position: relative;
+    width: 100%;
+    height: 25vw;
+}
+
+.img2, .img3 {
+    position: absolute;
+    top: 6vw;
+    height: 23vw;
+    width: auto;
+}
+
+/* Editable positions */
+.img2 { left: 2vw; }
+.img3 { left: 27vw; }
+
+/*-----------------------------
+  Vision/Values Images (img4 & img5 row 1)
+------------------------------*/
+.vision-row1 {
+    position: relative;
+    width: 100%;
+    height: 23vw;
+}
+
+.img4, .img5 {
+    position: absolute;
+    top: -16vw;
+    height: 23vw;
+    width: auto;
+}
+
+/* Editable positions */
+.img4 { left: 2vw; }
+.img5 { left: 55vw; }
+
+/*-----------------------------
+  Vision/Values Images (img6 & img7 row 2)
+------------------------------*/
+.vision-row2 {
+    position: relative;
+    width: 100%;
+    height: 23vw;
+    margin-top: 2vw;
+}
+
+.img6, .img7 {
+    position: absolute;
+    top: -10vw;
+    height: 23vw;
+    width: auto;
+}
+
+/* Editable positions */
+.img6 { left: 2vw; }
+.img7 { left: 27vw; }
+
+/*-----------------------------
+  Last Text Section
+------------------------------*/
+.ltext {
+    position: absolute;
+    top: 180vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    text-align: center;
+    font-family:nexa bold;
+    font-weight: 700;
+    font-size: 4vw;
+    letter-spacing:-1.1%;
+
     line-height: 150%;
     color: #FECD3E;
 }
+
+
+
+
+
