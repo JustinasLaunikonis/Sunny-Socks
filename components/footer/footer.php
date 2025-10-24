@@ -8,7 +8,7 @@
                 </a>
                 <nav class="footer-page-linkers" aria-label="Footer">
                     <a href="../product_page/product.php" class="footer-link">Products Overview</a>
-                    <a href="../sustainability_page/sustainability.html" class="footer-link">Sustainability</a>
+                    <a href="../sustainability_page/sustainability.php" class="footer-link">Sustainability</a>
                     <a href="../contacts_page/contacts.php" class="footer-link">Contacts</a>
                     <a href="../about_us_page/about_us.html" class="footer-link">About Us</a>
                     <a href="../campaign_page/campaign.php" class="footer-link">Campaign</a>
