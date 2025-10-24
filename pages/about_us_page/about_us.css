@@ -221,7 +221,37 @@ main::after {
     color: #FECD3E;
 }
 
+.feedback {
+    margin: 40px auto;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+}
 
+/* .feedback input,
+.feedback textarea {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.feedback button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback button:hover {
+    background-color: #e6b800;
+}
+ */
 
 
 

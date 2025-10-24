@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,6 +63,9 @@
     <a href="../chatbot/chatbot.php" class="boticon">
         <img src="../chatbot/bot-icon/jummy.png" alt="Sunny Socks Logo">
     </a>
+
+
+
 
 </main>
 
