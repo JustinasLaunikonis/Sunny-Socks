@@ -7,7 +7,7 @@
                     <img class="footer-logo" src="../../assets/Logos/svg/sunny_logos_white.svg" alt="Sunny Socks logo">
                 </a>
                 <nav class="footer-page-linkers" aria-label="Footer">
-                    <a href="../product_page/product.html" class="footer-link">Products Overview</a>
+                    <a href="../product_page/product.php" class="footer-link">Products Overview</a>
                     <a href="../sustainability_page/sustainability.html" class="footer-link">Sustainability</a>
                     <a href="../contacts_page/contacts.php" class="footer-link">Contacts</a>
                     <a href="../about_us_page/about_us.html" class="footer-link">About Us</a>
