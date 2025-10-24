@@ -1,26 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer</title>
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="footer_blue.css">
-</head>
-<body>
-    <footer>
+<?php
+    echo '<footer>
         <div class="footer-pattern"></div>
         <div class="footer-content">
             <div class="footer-left">
-                <a href="#" class="footer-link">
+                <a href="../home_page/home.php" class="footer-link">
                     <img class="footer-logo" src="../../assets/Logos/svg/sunny_logos_white.svg" alt="Sunny Socks logo">
                 </a>
                 <nav class="footer-page-linkers" aria-label="Footer">
-                    <a href="#" class="footer-link">Products Overview</a>
-                    <a href="#" class="footer-link">Sustainability</a>
-                    <a href="#" class="footer-link">Contacts</a>
-                    <a href="#" class="footer-link">About Us</a>
-                    <a href="#" class="footer-link">Campaign</a>
+                    <a href="../product_page/product.html" class="footer-link">Products Overview</a>
+                    <a href="../sustainability_page/sustainability.html" class="footer-link">Sustainability</a>
+                    <a href="../contacts_page/contacts.php" class="footer-link">Contacts</a>
+                    <a href="../about_us_page/about_us.html" class="footer-link">About Us</a>
+                    <a href="../campaign_page/campaign.php" class="footer-link">Campaign</a>
                 </nav>
             </div>
 
@@ -30,15 +21,15 @@
                 <h2 class="footer-contact-info">Contact</h2>
                 <ul class="footer-contact-list">
                     <li class="footer-contact-item">
-                        <a class="footer-contact-link" href="#">+31 (0)123 456 789</a>
+                        <a class="footer-contact-link" href="../404Error_page/404Error_page.html">+31 (0)123 456 789</a>
                         <div class="footer-contact-icon footer-icon-phone" aria-hidden="true"></div>
                     </li>
                     <li class="footer-contact-item">
-                        <a class="footer-contact-link" href="#">+31 (0)123 456 789</a>
+                        <a class="footer-contact-link" href="../404Error_page/404Error_page.html">+31 (0)123 456 789</a>
                         <div class="footer-contact-icon footer-icon-whatsapp" aria-hidden="true"></div>
                     </li>
                     <li class="footer-contact-item">
-                        <a class="footer-contact-link" href="#">info@sunny.nl</a>
+                        <a class="footer-contact-link" href="../404Error_page/404Error_page.html">info@sunny.nl</a>
                         <div class="footer-contact-icon footer-icon-email" aria-hidden="true"></div>
                     </li>
                     <li class="footer-contact-item footer-contact-item-address">
@@ -49,6 +40,5 @@
             </div>
         </div>
         <div class="footer-copyright" role="contentinfo">Copyright &#169; 2025 Website_Project1</div>
-    </footer>
-</body>
-</html>
+    </footer>';
+?>
