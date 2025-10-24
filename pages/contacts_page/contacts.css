@@ -19,10 +19,7 @@ body {
 
 /* Header appears at the very top at all times - JL */
 header { z-index: 10000; }
-
-main{
-    margin-top: var(--header-offset);
-}
+main{ margin-top: var(--header-offset); }
 
 .Messaging_Topper {
     width: 92vw;
@@ -218,7 +215,7 @@ main{
     opacity: 1;
     background: #E990B9;
     margin: 0% auto;
-    margin-bottom: 60px;
+    margin-bottom: 60px; /* Moved margin to the container - JL*/
 }
 
 .pink-box-text {
@@ -232,5 +229,4 @@ main{
     justify-content: center;
     align-items: center;
     text-align: center;
-    
 }
