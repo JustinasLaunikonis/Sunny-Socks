@@ -69,7 +69,6 @@ footer {
     object-fit: contain;
 
     cursor: pointer;
-    transition: opacity 0.3s ease;
 }
 
 /* Vertical divider between content */

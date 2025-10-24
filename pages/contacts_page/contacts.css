@@ -12,6 +12,16 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+
+    /* CSS variable to offset content below header - JL*/
+    --header-offset: clamp(150px, 25vh, 170px);
+}
+
+/* Header appears at the very top at all times - JL */
+header { z-index: 10000; }
+
+main{
+    margin-top: var(--header-offset);
 }
 
 .Messaging_Topper {
@@ -208,6 +218,7 @@ body {
     opacity: 1;
     background: #E990B9;
     margin: 0% auto;
+    margin-bottom: 60px;
 }
 
 .pink-box-text {
@@ -221,5 +232,5 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 60px;
+    
 }
