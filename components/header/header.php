@@ -4,7 +4,7 @@
 
         <nav class="header-nav-items">
             <a href="../product_page/product.php" class="header-nav-link">Products</a>
-            <a href="../about_us_page/about_us.html" class="header-nav-link">About</a>
+            <a href="../about_us_page/about_us.php" class="header-nav-link">About</a>
 
             <a href="../home_page/home.php" class="header-logo" aria-label="Home">
                 <img src="../../assets/Logos/png/sunny_logos-01.png" alt="Sunny Socks Logo">
