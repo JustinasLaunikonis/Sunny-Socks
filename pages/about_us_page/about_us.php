@@ -7,10 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="about_us.css">
     <link rel="stylesheet" href="../chatbot/bot-icon/jummy.css">
-    <title>About Us Page</title>
+    <title>About Us Page</title><link rel="icon" type="image/x-icon" href="../../assets/illustraties/png/Sunny_socks_Green.png">
+
+    <link rel="stylesheet" href="../../components/footer/footer.css">
+    <link rel="stylesheet" href="../../components/footer/footer_yellow.css">
+
+    <link rel="stylesheet" href="../../components/header/header.css">
+    <link rel="stylesheet" href="../../components/header/header_yellow.css">
 </head>
 <body>
-
+    <?php include '../../components/header/header.php'; ?>
 <main>
     <div class="mainbox">
 
@@ -63,11 +69,7 @@
     <a href="../chatbot/chatbot.php" class="boticon">
         <img src="../chatbot/bot-icon/jummy.png" alt="Sunny Socks Logo">
     </a>
-
-
-
-
 </main>
-
+<?php include "../../components/footer/footer.php"; ?>
 </body>
 </html>
