@@ -7,9 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="about_us.css">
     <link rel="stylesheet" href="../chatbot/bot-icon/jummy.css">
+
+    <link rel="stylesheet" href="../theme/darkmode.css">
+    
+
+
     <title>About Us Page</title>
 </head>
 <body>
+
+
+    <header>   
+    </header>
 
 <main>
     <div class="mainbox">
@@ -64,10 +73,11 @@
         <img src="../chatbot/bot-icon/jummy.png" alt="Sunny Socks Logo">
     </a>
 
-
-
-
 </main>
+
+
+<script src="../theme/darkmode.js"></script>
+
 
 </body>
 </html>
