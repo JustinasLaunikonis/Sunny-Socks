@@ -44,7 +44,7 @@
                     <img id = "jobs" src="img/Nice Jobs Card.png" alt="jobs">
                     <img id = "jobs1" src="img/Front_Card_Nice_Jobs.png" alt="jobs">
                 </div>
-                <img id = "endimg" src="img/Bottom Pattern 50% Alpha.png" alt="endimg">
+                <img id = "endimg" src="img/BottomPatern.png" alt="endimg">
                 <img id = "endgoal" src="img/End_Goal.png" alt="endgoal">
                 <div id="endheader">All this to ensure one goal</div>
                 <div id="endtext"><p><u>Sustainable</u> High-Quality Socks For A <u> Fair Price</u></p></div>
