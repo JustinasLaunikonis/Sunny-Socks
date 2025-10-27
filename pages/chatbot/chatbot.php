@@ -77,6 +77,7 @@ if (strpos($user_input, "hello") !== false || strpos($user_input, "hi") !== fals
     <form method="post" id="chat-form">
         <textarea name="message" placeholder="Say something..." required></textarea>
         <button type="submit">Send</button>
+        
         <button type="submit" name="clear" value="1" class="clear-btn">🧹 Clear</button>
     </form>
 </div>
