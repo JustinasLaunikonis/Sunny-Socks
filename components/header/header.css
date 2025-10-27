@@ -104,8 +104,6 @@ header {
 /* ----- Mobile Phone Responsiveness ----- */
 
 @media (max-width: 992px) {
-    header { padding: 0 0.75rem; }
-
     .header-nav-items {
         grid-template-columns: 1fr 1fr; /* 2 columns instead of 5 */
         grid-auto-rows: auto;

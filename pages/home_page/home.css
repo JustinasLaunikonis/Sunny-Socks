@@ -379,3 +379,23 @@ main::after {
     font-size: 1.6vw;
     width:100%;
 }
+
+@media (max-width: 992px) and (min-width: 768px) {
+    body {
+        --header-offset: clamp(160px, 20vh, 210px);
+    }
+
+    main::after {
+        height: calc(145vw + var(--header-offset));
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        --header-offset: clamp(140px, 17vh, 180px);
+    }
+
+    main::after {
+        height: calc(120vw + var(--header-offset));
+    }
+}
