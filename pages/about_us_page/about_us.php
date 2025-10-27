@@ -7,19 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="about_us.css">
     <link rel="stylesheet" href="../chatbot/bot-icon/jummy.css">
+    <title>About Us Page</title><link rel="icon" href="image/x-icon" href="../../assets/illustraties/png//Sunny_socks_Green.png">
 
     <link rel="stylesheet" href="../theme/darkmode.css">
     
-
-
-    <title>About Us Page</title>
+    <link rel="stylesheet" href="../../components/footer/footer.css">
+    <link rel="stylesheet" href="../../components/footer/footer_yellow.css">
+    
+    <link rel="stylesheet" href="../../components/header/header.css">
+    <link rel="stylesheet" href="../../components/header/header_yellow.css">
+    
 </head>
 <body>
-
-
-    <header>   
-    </header>
-
+    <?php include '../../components/header/header.php'; ?>
 <main>
     <div class="mainbox">
 
@@ -77,7 +77,7 @@
 
 
 <script src="../theme/darkmode.js"></script>
-
+<?php include '../../components/footer/footer.php'; ?>
 
 </body>
 </html>

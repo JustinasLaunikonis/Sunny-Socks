@@ -1,14 +1,10 @@
-/*-----------------------------
-  Fonts
-------------------------------*/
+/* Fonts*/
 @font-face {
     font-family: "Nexa";
     src: url("../assets/Fonts/Nexa Light.otf");
 }
 
-/*-----------------------------
-  Global Reset
-------------------------------*/
+/*Global Reset*/
 * {
     margin: 0;
     box-sizing: border-box;
@@ -26,9 +22,7 @@ body {
 /* Header appears at the very top at all times - JL */
 header { z-index: 10000; }
 
-/*-----------------------------
-  Main Container
-------------------------------*/
+/*  Main Container*/
 main::after {
     content: "";
     display: block;
@@ -42,9 +36,7 @@ main::after {
     margin: 0 auto;
 }
 
-/*-----------------------------
-  Grey Top Bar
-------------------------------*/
+/*  Grey Top Bar*/
 .grey1 {
     position: absolute;
     top: 24vw;
@@ -56,9 +48,7 @@ main::after {
     border-radius: 5vw;
 }
 
-/*-----------------------------
-  Hero Circle
-------------------------------*/
+/*  Hero Circle*/
 
 
 
@@ -85,9 +75,7 @@ main::after {
 }
 
 
-/*-----------------------------
-  Yellow Text Box
-------------------------------*/
+/*  Yellow Text Box*/
 .yellowt {
     position: absolute;
     top: 41vw;
@@ -104,9 +92,8 @@ main::after {
     text-align: center;
 }
 
-/*-----------------------------
-  Glue / Arrow
-------------------------------*/
+/*
+  Glue / Arrow*/
 .arrow {
     position: absolute;
     top: -7vw;
@@ -122,9 +109,7 @@ main::after {
     object-fit: contain;
 }
 
-/*-----------------------------
-  Grey Sections
-------------------------------*/
+/*  Grey Sections*/
 .grey2, .grey3 {
     position: absolute;
     left: 50%;
@@ -146,9 +131,7 @@ main::after {
     top: 125vw;
 }
 
-/*-----------------------------
-  Mission Images (img2 & img3)
-------------------------------*/
+/*  Mission Images (img2 & img3)*/
 .mission-images {
     position: relative;
     width: 100%;
@@ -166,9 +149,9 @@ main::after {
 .img2 { left: 2vw; }
 .img3 { left: 27vw; }
 
-/*-----------------------------
+/*
   Vision/Values Images (img4 & img5 row 1)
-------------------------------*/
+*/
 .vision-row1 {
     position: relative;
     width: 100%;
@@ -186,9 +169,7 @@ main::after {
 .img4 { left: 2vw; }
 .img5 { left: 55vw; }
 
-/*-----------------------------
-  Vision/Values Images (img6 & img7 row 2)
-------------------------------*/
+/*  Vision/Values Images (img6 & img7 row 2)*/
 .vision-row2 {
     position: relative;
     width: 100%;
@@ -207,9 +188,8 @@ main::after {
 .img6 { left: 2vw; }
 .img7 { left: 27vw; }
 
-/*-----------------------------
-  Last Text Section
-------------------------------*/
+/*
+  Last Text Section*/
 .ltext {
     position: absolute;
     top: 180vw;
@@ -245,28 +225,7 @@ main::after {
     }
 }
 
-/* .feedback input,
-.feedback textarea {
-    display: block;
-    width: 90%;
-    margin: 10px auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
 
-.feedback button {
-    background-color: #ffcc00;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.feedback button:hover {
-    background-color: #e6b800;
-}
- */
 
 
 
