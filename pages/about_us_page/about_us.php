@@ -43,8 +43,10 @@
                 <img src="img/Glue.png" alt="Arrow Image" class="img1">
             </div>
             <div class="mission-images">
-                <img src="img/Mission Card.png" alt="Mission Card 1" class="img2">
+               <img src="img/Mission Card.png" alt="Mission Card 1" class="img2">
+               <img src="img/Hoover Mission Card.png" alt="" class="img22">
                 <img src="img/Mission Card2.png" alt="Mission Card 2" class="img3">
+                <img src="img/Hoover Mission Text.png" alt="" class="img33">
             </div>
         </div>
 
@@ -52,11 +54,17 @@
         <div class="grey3">
             <div class="vision-row1">
                 <img src="img/Vision Card.png" alt="Vision Card" class="img4">
+               <img src="img/Hoover Vision Text.png" alt="" class="img44">
                 <img src="img/Vision Card2.png" alt="Vision Card 2" class="img5">
+                <img src="img/Hoover Vision Card.png" alt="" class="img55">
             </div>
+
+
             <div class="vision-row2">
                 <img src="img/Values Card.png" alt="Values Card 1" class="img6">
+                <img src="img/Hoover Values Card.png" alt="" class="img66">
                 <img src="img/Values Card1.png" alt="Values Card 2" class="img7">
+                <img src="img/Hoover Values Text.png" alt="" class="img77">
             </div>
         </div>
 
