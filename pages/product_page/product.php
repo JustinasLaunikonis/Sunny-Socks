@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="../../components/header/header.css">
     <link rel="stylesheet" href="../../components/header/header_orange.css">
+
+    <link rel="stylesheet" href="../theme/darkmode.css">
 </head>
 
 <body>
@@ -161,7 +163,11 @@
                 </div>
             </div>
         </div>
+
+
         <?php include "../../components/footer/footer.php"; ?>
+
+        <script src="../theme/darkmode.js"></script>
     </main>
 </body>
 
