@@ -138,6 +138,14 @@ main::after {
     height: 25vw;
 }
 
+.img22, .img33 {
+    position: absolute;
+    top: 6vw;
+    height: 23vw;
+    width: auto;
+    opacity:0;
+}
+
 .img2, .img3 {
     position: absolute;
     top: 6vw;
@@ -145,9 +153,20 @@ main::after {
     width: auto;
 }
 
+.img22:hover,
+.img33:hover{
+    opacity:100;
+}
+
+
 /* Editable positions */
 .img2 { left: 2vw; }
 .img3 { left: 27vw; }
+
+.img22 { left: 2vw; }
+.img33 { left: 27vw; }
+
+
 
 /*
   Vision/Values Images (img4 & img5 row 1)
@@ -163,11 +182,29 @@ main::after {
     top: -16vw;
     height: 23vw;
     width: auto;
+    
+}
+
+.img44, .img55 {
+    position: absolute;
+    top: -16vw;
+    height: 23vw;
+    width: auto;
+    opacity:0;
+}
+
+.img44:hover, 
+.img55:hover{
+    opacity:100;
 }
 
 /* Editable positions */
 .img4 { left: 2vw; }
 .img5 { left: 55vw; }
+
+.img44 { left: 2vw; }
+.img55 { left: 55vw; }
+
 
 /*  Vision/Values Images (img6 & img7 row 2)*/
 .vision-row2 {
@@ -177,16 +214,36 @@ main::after {
     margin-top: 2vw;
 }
 
+
+.img66, .img77 {
+    position: absolute;
+    top: -10vw;
+    height: 23vw;
+    width: auto;
+    opacity:0;
+}
+
 .img6, .img7 {
     position: absolute;
     top: -10vw;
     height: 23vw;
     width: auto;
+    
 }
 
+.img66:hover ,
+.img77:hover{
+    opacity:100;
+}
 /* Editable positions */
 .img6 { left: 2vw; }
 .img7 { left: 27vw; }
+
+.img66 { left: 2vw; }
+.img77 { left: 27vw; }
+
+
+
 
 /*
   Last Text Section*/

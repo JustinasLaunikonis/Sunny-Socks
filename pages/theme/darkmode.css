@@ -3,8 +3,7 @@
 /* Button styling (fixed position using vw/vh) */
 .theme-toggle {
   position: fixed;
-  top: 2vh;
-  right: 2vw;
+  top: 17vh;
   background-color: #333;
   color: white;
   border: none;
