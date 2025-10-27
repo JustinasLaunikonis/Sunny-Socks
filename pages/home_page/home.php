@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="../../components/header/header.css">
     <link rel="stylesheet" href="../../components/header/header_blue.css">
+
+    <link rel="stylesheet" href="../theme/darkmode.css">
 </head>
 <body>
     <?php include '../../components/header/header.php'; ?>
@@ -84,6 +86,8 @@
 
         </div>
     </main>
+    
+<script src="../theme/darkmode.js"></script>
     <?php include "../../components/footer/footer.php"; ?>
 </body>
 </html>
