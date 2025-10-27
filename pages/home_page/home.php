@@ -51,13 +51,13 @@
                 <h1>Ready to find socks that make you smile?</h1>
                 <img  src="img/Sun Icon.png" alt="sun image">
                 <h2>Then don’t lose time in buying your sole-mates!</h2>
-                <a href="../product_page/product.html">
+                <a href="../product_page/product.php">
                     <div id="productbutton"></div>
                     <div id="productbuttoninside">
                         <h2>View Our Products!</h2>
                     </div>
                 </a>
-                <a href="../campaign_page/campaign.html">
+                <a href="../campaign_page/campaign.php">
                     <div id="campaignbutton"></div>
                     <div id="campaignbuttoninside">
                         <h2>Have a peek at our campaign!</h2>
@@ -71,7 +71,7 @@
                 </div>
                 <div id = "greybg2">
                     <h2>More than socks<br>We are a movement of <b>joy</b>,<br> <b>color</b> and <b>fairness</b></h2>
-                    <a href="../about_us_page/about_us.html">
+                    <a href="../about_us_page/about_us.php">
                         <div id="aboutusbutton"></div>
                         <div id="aboutusbuttoninside">
                         <h2>Read more</h2>
