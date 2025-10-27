@@ -7,6 +7,8 @@
     <title>Sustainability page</title>
     <link rel="icon" type="image/x-icon" href="../../assets/illustraties/png/Sunny_socks_Green.png">
 
+     <link rel="stylesheet" href="../theme/darkmode.css">
+
     <link rel="stylesheet" href="../../components/footer/footer.css">
     <link rel="stylesheet" href="../../components/footer/footer_green.css">
 
@@ -51,6 +53,9 @@
             </div>
         </div>
     </main>
+    
     <?php include "../../components/footer/footer.php"; ?>
+     <script src="../theme/darkmode.js"></script>
+
 </body>
 </html>
