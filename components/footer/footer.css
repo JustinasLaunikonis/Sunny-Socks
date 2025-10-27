@@ -112,7 +112,6 @@ footer {
     font-weight: 700;
     font-size: clamp(1rem, 1.8vw, 24px);
     line-height: 200%;
-    letter-spacing: -0.011em;
     white-space: nowrap;
     display: block;
     text-align: left;
