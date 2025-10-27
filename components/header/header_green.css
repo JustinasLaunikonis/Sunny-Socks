@@ -12,28 +12,11 @@ header { background: #1E407A; }
     Top | Right | Bottom | Left 
     padding (bottom extended to touch header bottom)
     */
-    padding: clamp(6px, 1.2vw, 12px) clamp(8px, 2vw, 16px) clamp(1.5rem, 2vh, 3rem) clamp(8px, 2vw, 16px);
+    padding: clamp(6px, 1.2vw, 12px) clamp(8px, 2vw, 16px) clamp(2rem, 3vh, 4rem) clamp(8px, 2vw, 16px);
     
-    margin-bottom: -1.5rem; /* White touches header bottom */
-}
-
-/* Custom underline */
-.header-nav-items a:nth-child(4)::after {
-    content: '';
-
-    position: absolute;
-    top: clamp(25px, 5vw, 45px); /* Adjusted position */
-
-    left: 50%;
-    transform: translateX(-50%); /* Center */
-    
-    width: clamp(110px, 15vw, 160px);
-    height: clamp(3px, 0.8vh, 5px);
-    
-    background: #51B2A2;
-    border-radius: 3px;
-    
-    z-index: 4;
+    margin-bottom: clamp(-2rem, -3vh, -4rem); /* White touches header bottom */
+    text-decoration: underline;
+    text-underline-offset: 20%;
 }
 
 .header-nav-items a:nth-child(1) { color: #ffffff; }
