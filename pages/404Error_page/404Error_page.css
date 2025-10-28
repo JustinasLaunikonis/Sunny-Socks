@@ -43,11 +43,13 @@ body {
     font-family: "Nexa";
     color: white;
     text-align: center;
+    /*max-width: 100vw;
+    max-height: 100vh;*/
 }
 
 .MainContent {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     height: 100vh;
     /* place-items: center; */
 }
@@ -57,11 +59,12 @@ body {
 --------------------------------------------------------*/
 
 .leftContent {
-    grid-column: 1 / 3;
+    grid-column: 2 / 6;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
     margin: var(--gap-spacing);
+    max-height: 100vh;
 }
 
 .imageWrapper {
@@ -76,13 +79,15 @@ body {
     border-radius: var(--radius);
     transform: rotate(var(--angle)) scale(var(--scale));
     z-index: 2;
-    width: 60%;
+    width: clamp(180px, 60%, 380px);
+    max-width: 380px;
     aspect-ratio: 1 / 1;
 }
 
 .imageWrapper img {
     position: absolute;
-    width: 40%;
+    width: clamp(120px, 40%, 260px);
+    max-width: 260px;
     aspect-ratio: 1 / 1;
     z-index: 3;
 }
@@ -134,4 +139,138 @@ body {
     font-size: clamp(1rem, 2vw, 1.5rem);
 
     margin-top: -3rem;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    line-height: 0;
+    bottom: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.wave path {
+    fill: #00c3ff;
+}
+
+/*--------------------------------------------------------
+    4. Responsive Design Adjustments
+--------------------------------------------------------*/
+
+/* Tablet view (e.g., <= 1024px) */
+@media (max-width: 1024px) {
+    .MainContent {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .leftContent {
+        grid-column: 1 / 5;
+        margin: var(--gap-spacing);
+    }
+
+    .imageWrapper img {
+        width: 50%;
+    }
+
+    .redBox {
+        width: 70%;
+    }
+
+    .textBox {
+        margin-top: -2rem;
+        font-size: clamp(1rem, 3vw, 1.4rem);
+    }
+}
+
+/* Mobile view (<= 768px) */
+@media (max-width: 768px) {
+    .MainContent {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .leftContent {
+        grid-column: 1;
+        margin: 1rem;
+        align-items: center;
+    }
+
+    .imageWrapper {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .imageWrapper img {
+        width: 70%;
+        max-width: 200px;
+    }
+
+    .redBox {
+        width: 90%;
+        max-width: 250px;
+    }
+
+    .yellowBox {
+        height: 20%;
+    }
+
+    .textBox {
+        padding: 1.25rem;
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
+    }
+
+    .sockErrorText {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+        padding-inline: 15px;
+    }
+
+    .sock, .found {
+        color: white;
+    }
+
+    .wave {
+        height: 80px;
+    }
+
+    .wave svg {
+        height: 80px;
+    }
+}
+
+/* Small mobile view (<= 480px) */
+@media (max-width: 480px) {
+    body {
+        text-align: center;
+    }
+
+    .imageWrapper img {
+        width: 56%;
+    }
+
+    .redBox {
+        width: 100%;
+    }
+
+    .textBox {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .sockErrorText, .not {
+        font-size: 1rem;
+    }
+
+    .sock, .found {
+        color: white;
+    }
 }
