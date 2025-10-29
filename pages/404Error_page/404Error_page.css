@@ -119,7 +119,8 @@ body {
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
-.sock, .found {
+.sock,
+.found {
     color: var(--red);
 }
 
@@ -148,6 +149,7 @@ body {
     overflow: hidden;
     line-height: 0;
     bottom: 0;
+    z-index: 0;
 }
 
 .wave svg {
@@ -159,6 +161,24 @@ body {
 
 .wave path {
     fill: #00c3ff;
+}
+
+.blueBackground {
+    display: none;
+}
+
+.mobileTitle {
+    display: none;
+}
+
+.bottomImages {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    justify-content: space-between;
+    height: 280px;
+    width: 100%;
+    z-index: 1;
 }
 
 /*--------------------------------------------------------
@@ -192,27 +212,30 @@ body {
 
 /* Mobile view (<= 768px) */
 @media (max-width: 768px) {
+    html, body {
+        overflow: hidden;
+    }
     .MainContent {
         grid-template-columns: 1fr;
         height: auto;
+        padding: 1rem;
     }
 
     .leftContent {
         grid-column: 1;
-        margin: 1rem;
+        margin: 0;
         align-items: center;
     }
 
     .imageWrapper {
         flex-direction: column;
         width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
+        margin: 0;
     }
 
     .imageWrapper img {
         width: 70%;
-        max-width: 200px;
+        max-width: 170px;
     }
 
     .redBox {
@@ -221,7 +244,7 @@ body {
     }
 
     .yellowBox {
-        height: 20%;
+        width: 100%;
     }
 
     .textBox {
@@ -234,16 +257,50 @@ body {
         padding-inline: 15px;
     }
 
-    .sock, .found {
+    .sock,
+    .found {
         color: white;
     }
 
     .wave {
+        position: relative;
         height: 80px;
     }
 
     .wave svg {
         height: 80px;
+    }
+
+    .blueBackground {
+        position: relative;
+        display: block;
+        background-color: #00c3ff;
+        height: 100vh;
+        width: 100%;
+        margin-top: -1px;
+        z-index: 0;
+    }
+
+    .mobileTitle {
+        display: block;
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        font-weight: 700;
+        color: var(--red);
+        margin-top: 1.5rem;
+    }
+
+    /* Hide original inline text on small screens */
+    .sockErrorText,
+    .not {
+        display: none;
+    }
+
+    #not {
+        color: var(--yellow);
+    }
+
+    .bottomImages {
+        height: 190px;
     }
 }
 
@@ -266,11 +323,17 @@ body {
         padding: 1rem;
     }
 
-    .sockErrorText, .not {
+    .sockErrorText,
+    .not {
         font-size: 1rem;
     }
 
-    .sock, .found {
+    .sock,
+    .found {
         color: white;
+    }
+
+    .bottomImages {
+        height: 150px;
     }
 }
