@@ -28,21 +28,61 @@
                 All your purchases receipts are followed up with totally great socks-related jokes!<br>
                 Because even your cringe smile is our way to brighten your day.
                 </div>
-        </div>
+            </div>
         <section class="form-box">
-            <div class="white-box"></div>
             <form class="contact-form">
-                <div>
+                <div class="name-surname">
                     <input type="text" id="name" class="name" name="name" placeholder="First Name">
                     <input type="text" id="surname" class="surname" name="surname" placeholder="Surname">
                 </div>
-                <div>
+                <div class="email-phone">
                     <input type="text" id="email" class="email" name="email" placeholder="Email address">
                     <input type="text" id="phone" class="phone" name="phone" placeholder="Phone number">
                 </div>
-                <input type="text" id="company" class="company" name="company" placeholder="Company name">
-                <textarea name="message" id="message" class="message" name="message" placeholder="Your message"></textarea>
+                <div>
+                    <input type="text" id="company" class="company" name="company" placeholder="Company name">
+                </div>
+                <div>
+                    <textarea name="message" id="message" class="message" name="message" placeholder="Your message"></textarea>
+                </div>
+                <div class="form-text">
+                    By continuing, you agree to our Terms and Privacy Policy.<br>
+                    We will never share your information with third parties.
+                </div>
+                <div class="subscribe-box">
+                    <input type="checkbox" id="subscribe-checkbox" class="subscribe-checkbox">
+                    <label for="subscribe-checkbox" class="cross"></label>
+                    <span class="subscribe-text">Subscribe to our newsletter.</span>
+                </div>
+                <div>
+                    <button type="submit" class="send-button">Send!</button>
+                </div>
             </form>
+            <div class="Divider"></div>
+            <div class="contacts-right">
+                <div class="Contacts">Contacts!</div>
+                <ul class="contact-list">
+                    <li class="contact-item1"><a href="#" class="contact-link">+31 (0)123 456 789</a>
+                        <img src="../../assets/Contact Page Assets/Phone_Bold.png" alt="Phone-Bold" class="Phone-Bold">
+                    </li>
+                    <li class="contact-item2"><a href="#" class="contact-link">+31 (0)123 456 789</a>
+                        <img src="../../assets/Contact Page Assets/Whatsapp_Bold.png" alt="Whatsapp-Bold" class="Whatsapp-Bold">
+                    </li>
+                    <li class="contact-item3"><a href="#" class="contact-link">info@sunny.nl</a>
+                        <img src="../../assets/Contact Page Assets/Email_Bold.png" alt="Email-Bold" class="Email-Bold">
+                    </li>
+                    <li class="contact-item4">Van Schaikweg 94,<br>7811 KL Emmen
+                        <img src="../../assets/Contact Page Assets/Location_Bold.png" alt="Location-Bold" class="Location-Bold">
+                    </li>
+                </ul>
+                <div class="contact-text">We are available by phone Monday through Friday from 8:30 a.m. to 5 p.m.</div>
+                <div class="Follow-Us">Follow Us!</div>
+                <div>
+                    <img src="../../assets/Contact Page Assets/Linkdin_Button.png" alt="Linkdin-Button" class="Linkdin-Button">
+                    <img src="../../assets/Contact Page Assets/Instagram_Button.png" alt="Instagram-Button" class="Instagram-Button">
+                    <img src="../../assets/Contact Page Assets/Facebook_Button.png" alt="Facebook-Button" class="Facebook-Button">
+                </div>
+            </div>
         </section>
         <div class="pink-box">
             <div class="pink-box-text">
