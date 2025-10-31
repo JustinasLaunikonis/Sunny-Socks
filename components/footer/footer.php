@@ -21,19 +21,19 @@
                 <h2 class="footer-contact-info">Contact</h2>
                 <ul class="footer-contact-list">
                     <li class="footer-contact-item">
-                        <a class="footer-contact-link" href="../404Error_page/404Error_page.html">+31 (0)123 456 789</a>
+                        <a class="footer-contact-link" href="../404Error_page/404Error_page.php">+31 (0)123 456 789</a>
                         <div class="footer-contact-icon footer-icon-phone" aria-hidden="true"></div>
                     </li>
                     <li class="footer-contact-item">
-                        <a class="footer-contact-link" href="../404Error_page/404Error_page.html">+31 (0)123 456 789</a>
+                        <a class="footer-contact-link" href="../404Error_page/404Error_page.php">+31 (0)123 456 789</a>
                         <div class="footer-contact-icon footer-icon-whatsapp" aria-hidden="true"></div>
                     </li>
                     <li class="footer-contact-item">
-                        <a class="footer-contact-link" href="../404Error_page/404Error_page.html">info@sunny.nl</a>
+                        <a class="footer-contact-link" href="../404Error_page/404Error_page.php">info@sunny.nl</a>
                         <div class="footer-contact-icon footer-icon-email" aria-hidden="true"></div>
                     </li>
                     <li class="footer-contact-item footer-contact-item-address">
-                        <div class="footer-contact-address">Van Schaikweg 94,<br> 7811 KL Emmen</div>
+                        <a class="footer-contact-address" href="../404Error_page/404Error_page.php">Van Schaikweg 94,<br> 7811 KL Emmen</a>
                         <div class="footer-contact-icon footer-icon-location" aria-hidden="true"></div>
                     </li>
                 </ul>
