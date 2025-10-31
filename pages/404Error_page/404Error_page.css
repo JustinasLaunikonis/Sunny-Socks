@@ -1,0 +1,537 @@
+/*--------------------------------------------------------
+      CSS COMMENT LEGEND
+      ------------------
+      " Display setups "       → layout and flex/grid configurations
+      " Aesthetic properties " → colors, typography, and visuals
+      " Positioning "          → placement and z-index layering
+      " Measurements "         → widths, heights, padding, margins
+      " Animations "           → motion or transitions
+      " Other Legends "        → for more specific functionalities
+--------------------------------------------------------*/
+
+/*--------------------------------------------------------
+            1. Base / Variables Storage (resets)
+
+    Includes base resets and font imports for global 
+   consistency. Also stores core color variables, spacing 
+   constants, and other reusable design tokens.
+--------------------------------------------------------*/
+
+/* Imports */
+@font-face {
+    font-family: "Nexa";
+    src: url("../../assets/Fonts/Nexa/Light.otf");
+}
+
+/* Base */
+* {
+    box-sizing: border-box;
+}
+
+/* Resets */
+:root {
+    /* Color variables */
+    --blue: #1E407A;
+    --green: #51B2A2;
+    --pink: #E990B9;
+    --red: #F15B39;
+    --yellow: #FECD3E;
+
+    /* Sizing */
+    --radius: 1.375rem;
+    --scale: 0.7071;
+
+    /* Spacings */
+    --main-spacing: 3.75rem;
+    --gap-spacing: 1.875rem;
+
+    /* Custom rotation */
+    --angle: 45deg;
+}
+
+/*--------------------------------------------------------
+      2. General Properties (body) / Main Properties
+
+    Defines the overall page setup including global 
+   layout behavior, font settings, color defaults, 
+   and main structural grid configuration.
+--------------------------------------------------------*/
+
+body {
+    /* Measurements */
+    margin: 0;
+
+    /* Aesthetic properties */
+    text-align: center;
+    font-family: "Nexa";
+    color: white;
+
+    /* Fill the screen, no scrollbars */
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.MainContent {
+    /* Display setups */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    /* Ensures full viewport height, preventing 
+    layout shift from Chrome’s scrollbar. */
+    height: 100vh;
+}
+
+/*--------------------------------------------------------
+      3. Properties inside of MainContent div
+
+    Styles and arranges the main 404 content area, 
+   including the title, images, and text components. 
+   Handles internal layering and positioning details.
+--------------------------------------------------------*/
+
+/* 
+Z-INDEX LAYERING SYSTEM (bottom to top)
+---------------------------------------
+0 → yellowBox / wave background
+1 → redBox / sockErrorText
+2 → image / "Not" text / interactive elements
+3+ → reserved for overlays or future elements
+*/
+
+.leftContent {
+    /* Display setups */
+    grid-column: 2 / 6;
+    display: flex;
+    flex-direction: column;
+
+    /* Aesthetic properties */
+    margin: var(--gap-spacing);
+}
+
+/* --- Inside .leftContent --- */
+
+.mobileTitle {
+    /* Only to be visible on mobile devices */
+    display: none;
+}
+
+.imageWrapper {
+    /* Display setups */
+    display: flex;
+
+    /* Aesthetic properties */
+    justify-content: center;
+    align-items: center;
+
+    /* Positioning */
+    position: relative;
+}
+
+/* --- Inside .imageWrapper --- */
+
+.redBox {
+    /* Aesthetic properties */
+    background-color: var(--red);
+    border-radius: var(--radius);
+    transform: rotate(var(--angle)) scale(var(--scale));
+
+    /* Measurements */
+    width: clamp(180px, 60%, 380px);
+    max-width: 380px;
+    aspect-ratio: 1 / 1;
+
+    /* Positioning */
+    z-index: 1;
+}
+
+.imageWrapper img {
+    /* Measurements */
+    width: clamp(120px, 40%, 260px);
+    max-width: 260px;
+    aspect-ratio: 1 / 1;
+
+    /* Positioning */
+    position: absolute;
+
+    z-index: 2;
+}
+
+.yellowBox {
+    /* Aesthetic properties */
+    background-color: var(--yellow);
+    border-radius: var(--radius);
+
+    /* Measurements */
+    width: 100%;
+    height: 25%;
+
+    /* Positioning */
+    position: absolute;
+
+    z-index: 0;
+}
+
+.not,
+.sockErrorText {
+    /* Aesthetic properties */
+    font-weight: 700;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+
+    /* Positioning */
+    position: absolute;
+}
+
+.not {
+    /* Aesthetic properties */
+    color: var(--yellow);
+
+    /* Positioning */
+    top: 8%;
+
+    z-index: 2;
+}
+
+.sockErrorText {
+    /* Display setups */
+    display: flex;
+
+    /* Aesthetic properties */
+    justify-content: space-between;
+    align-items: center;
+    color: var(--red);
+
+    /* Measurements */
+    padding-inline: 30px;
+    width: 100%;
+
+    /* Positioning*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+}
+
+.textBox {
+    /* Aesthetic properties */
+    background-color: var(--yellow);
+    border-radius: var(--radius);
+    padding: var(--gap-spacing);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+
+    /* Measurements */
+    padding: var(--gap-spacing);
+
+    /* Positioning */
+    margin-top: -3rem;
+}
+
+/* --- Inside .textBox --- */
+
+.homeLink {
+    /* Aesthetic properties */
+    color: var(--red);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+
+    /* Positioning */
+    position: relative;
+
+    z-index: 2;
+}
+
+.homeLink:hover {
+    /* Aesthetic properties */
+    color: var(--blue);
+}
+
+/*--------------------------------------------------------
+       4. Properties outside the MainContent div
+
+    Covers decorative and background elements placed 
+   outside the main grid, such as the animated wave, 
+   floating images, and color background layers.
+--------------------------------------------------------*/
+
+.bottomImages {
+    /* Display setups */
+    display: flex;
+
+    /* Aesthetic properties */
+    justify-content: space-between;
+
+    /* Measurements */
+    width: 100%;
+    height: 280px;
+
+    /* Positioning */
+    position: absolute;
+    bottom: 0;
+
+    z-index: 1;
+}
+
+.wave {
+    /* Display setups */
+    display: flex;
+
+    /* Measurements */
+    width: 200%;
+    height: 100px;
+    line-height: 0;
+
+    /* Positioning */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    /* Appling continuous horizontal animation 
+    for wave movement. */
+    animation: waveMove 8s linear infinite;
+}
+
+.wave svg {
+    /* Display Setups */
+    flex: 0 0 50%;
+
+    /* Measurements */
+    height: 100%;
+
+    /* Positioning */
+    margin-right: -1px;
+}
+
+.wave path {
+    /*Aesthetic properties*/
+    fill: #00c3ff;
+}
+
+/* Keyframes for the wave movement */
+@keyframes waveMove {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.blueBackground {
+    /* Only to be visible on mobile devices */
+    display: none;
+}
+
+/*--------------------------------------------------------
+            5. Responsive Design Adjustments
+            
+    This section adapts layout and element scaling for:
+   - Tablets (≤ 1024px)
+   - Mobile devices (≤ 912px)
+   - Small phones (≤ 480px)
+--------------------------------------------------------*/
+
+/* Tablet breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+
+    /*--------------------------------------------
+    2. General Properties (body) / Main Properties
+    --------------------------------------------*/
+    .MainContent {
+        /* Display setups */
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /*-------------------------------------
+    3. Properties inside of MainContent div
+    -------------------------------------*/
+    .leftContent {
+        /* Display setups */
+        grid-column: 1 / 5;
+
+        /* Measurements */
+        margin: var(--gap-spacing);
+    }
+
+    .redBox {
+        /* Measurements */
+        width: 70%;
+    }
+
+    .imageWrapper img {
+        /* Measurements */
+        width: 50%;
+    }
+
+    .not,
+    .sock,
+    .found,
+    .textBox {
+        /* Aesthetic properties */
+        font-size: clamp(1rem, 3vw, 1.4rem);
+    }
+
+    /*---------------------------------------
+    4. Properties outside the MainContent div
+    ---------------------------------------*/
+    .bottomImages {
+        height: 190px;
+    }
+
+}
+
+/* Mobile breakpoint (max-width: 912px) */
+@media (max-width: 912px) {
+
+    /*--------------------------------------------
+    2. General Properties (body) / Main Properties
+    --------------------------------------------*/
+    html,
+    body {
+        /* Fill the screen, no scrollbars */
+        overflow: hidden;
+    }
+
+    .MainContent {
+        /* Display setups */
+        grid-template-columns: 1fr;
+
+        /* Measurements */
+        height: auto;
+        padding: 1rem;
+    }
+
+    /*-------------------------------------
+    3. Properties inside of MainContent div
+    -------------------------------------*/
+    .leftContent {
+        /* Measurements */
+        margin: 0;
+
+        /* Aesthetic properties */
+        align-items: center;
+    }
+
+    .mobileTitle {
+        /* Make it show up */ 
+        display: block;
+
+        /* Aesthetic properties */
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        color: var(--red);
+    }
+
+    #not {
+        /* Aesthetic properties */
+        color: var(--yellow);
+    }
+
+    .imageWrapper {
+        /* Measurements */
+        width: 100%;
+        margin: 0;
+    }
+
+    .redBox {
+        /* Measurements */
+        width: 90%;
+        max-width: 250px;
+    }
+
+    .imageWrapper img {
+        /* Measurements */
+        width: 70%;
+        max-width: 170px;
+    }
+
+    .yellowBox {
+        /* Measurements */
+        width: 100%;
+    }
+
+    /* Hide original title text on small screens */
+    .sockErrorText,
+    .not {
+        /* Display Setup */
+        display: none;
+    }
+
+    .textBox {
+        /* Aesthetic properties */
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
+
+        /* Measurements */
+        padding: 1.25rem;
+
+        /* Positioning */
+        margin-top: -2rem;
+    }
+
+    /*---------------------------------------
+    4. Properties outside the MainContent div
+    ---------------------------------------*/
+    .bottomImages {
+        /* Measurements */
+        height: 190px;
+    }
+
+    .wave {
+        /* Positioning */
+        position: relative;
+
+        /* Measurements */
+        height: 80px;
+    }
+
+    .wave svg {
+        /* Measurements */
+        height: 80px;
+    }
+
+    .blueBackground {
+        /* Make it show up */
+        display: block;
+
+        /* Positioning */
+        position: relative;
+        margin-top: -2px;
+        z-index: 0;
+
+        /* Aesthetic properties */
+        background-color: #00c3ff;
+
+        /* Measurements */
+        height: 100vh;
+        width: 100%;
+    }
+
+}
+
+/* Small mobile breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+
+    /*-------------------------------------
+    3. Properties inside of MainContent div
+    -------------------------------------*/
+    .imageWrapper img {
+        /* Measurements */
+        width: 56%;
+    }
+
+    .textBox {
+        /* Measurements */
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    /*---------------------------------------
+    4. Properties outside the MainContent div
+    ---------------------------------------*/
+    .bottomImages {
+        /* Measurements */
+        height: 150px;
+    }
+}

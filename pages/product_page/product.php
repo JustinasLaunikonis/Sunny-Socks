@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="product.css">
     <title>Product Overview</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/illustraties/png/Sunny_socks_Green.png">
+
+    <link rel="stylesheet" href="../../components/footer/footer.css">
+    <link rel="stylesheet" href="../../components/footer/footer_orange.css">
+
+    <link rel="stylesheet" href="../../components/header/header.css">
+    <link rel="stylesheet" href="../../components/header/header_orange.css">
+
+    <link rel="stylesheet" href="../theme/darkmode.css">
 </head>
 
 <body>
+    <?php include '../../components/header/header.php'; ?>
     <main>
-        <header>
-
-        </header>
         <div Class="MainContainer">
 
             <h1>Which team are you?</h1>
@@ -156,9 +163,11 @@
                 </div>
             </div>
         </div>
-        <footer>
 
-        </footer>
+
+        <?php include "../../components/footer/footer.php"; ?>
+
+        <script src="../theme/darkmode.js"></script>
     </main>
 </body>
 

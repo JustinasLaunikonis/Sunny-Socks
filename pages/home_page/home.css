@@ -189,7 +189,8 @@ main::after {
     top:27vw;
     width:20vw;
     height:6vw;
-    border-radius:1vw;
+    border-radius:1vw; 
+    transition: transform 0.3s ease;
 }
 #productbuttoninside{
     background-color: #FECD3E;
@@ -200,6 +201,7 @@ main::after {
     height:5vw;
     border-radius:1vw;
     border:white 0.5vw solid;
+    transition: transform 0.3s ease;
 }
 #productbuttoninside h2{
     position: absolute;
@@ -217,6 +219,7 @@ main::after {
     width:20vw;
     height:6vw;
     border-radius:1vw;
+    transition: transform 0.3s ease;
 }
 #campaignbuttoninside{
     background-color: white;
@@ -227,6 +230,7 @@ main::after {
     height:5vw;
     border-radius:1vw;
     border:#FECD3E 0.5vw solid;
+    transition: transform 0.3s ease;
 }
 #campaignbuttoninside h2{
     position: absolute;
@@ -236,8 +240,6 @@ main::after {
     font-size: 1.6vw;
     width:100%;
 }
-
-
 #bottomglue{
     position:absolute;
     top:-5vw;
@@ -348,6 +350,7 @@ main::after {
     width:20vw;
     height:6vw;
     border-radius:1vw;
+    transition: transform 0.3s ease;
 }
 #aboutusbuttoninside{
     background-color: #FECD3E;
@@ -358,7 +361,16 @@ main::after {
     height:5vw;
     border-radius:1vw;
     border:white 0.5vw solid;
+    transition: transform 0.3s ease;
 }
+
+#productbuttoninside:hover,
+#productbutton:hover,
+#campaignbutton:hover,
+#campaignbuttoninside:hover,
+#aboutusbutton:hover,
+#aboutusbuttoninside:hover{ transform: scale(1.05); }
+
 #aboutusbuttoninside h2{
     position: absolute;
     top:1vw;
@@ -366,4 +378,24 @@ main::after {
     color:white;
     font-size: 1.6vw;
     width:100%;
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    body {
+        --header-offset: clamp(160px, 20vh, 210px);
+    }
+
+    main::after {
+        height: calc(145vw + var(--header-offset));
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        --header-offset: clamp(140px, 17vh, 180px);
+    }
+
+    main::after {
+        height: calc(120vw + var(--header-offset));
+    }
 }

@@ -36,6 +36,9 @@
     --angle: 5deg;
     --negative-angle: -5deg;
     --extra: calc((1 - cos(var(--angle))) * 50vw);
+
+    /* CSS variable to offset content below header - JL*/
+    --header-offset: clamp(110px, 9vh, 120px);
 }
 
 /*--------------------------------------------------------
@@ -47,6 +50,10 @@ body {
     font-family: "Nexa";
     text-align: center;
 }
+
+/* Header appears at the very top at all times - JL */
+header { z-index: 10000; }
+main{ margin-top: var(--header-offset); }
 
 h1 {
     color: var(--red);
