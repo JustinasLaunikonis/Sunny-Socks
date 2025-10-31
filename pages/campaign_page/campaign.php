@@ -44,24 +44,23 @@
                 </div>
                 <div id = "greybg2"><p>Sunny Socks is more than just bold patterns and bright colors. With each pair, we’re weaving in responsibility and sustainability. This is just the beginning—we’ll continue finding better ways to reduce our footprint.</p></div>
                 
+                <?php
+                $promises = [
+                    ["img" => "img/Plastic recycling.png", "title" => "Organic &<br>Recycled<br>Materials"],
+                    ["img" => "img/Factory.png", "title" => "Smarter<br>Production"],
+                    ["img" => "img/Eco car.png", "title" => "Cleaner<br>Production"],
+                    ["img" => "img/Sustainable.png", "title" => "Eco-Friendly<br>Packaging"]
+                ];
+                ?>
                 <div class="promises">
-                    <div>
-                        <img src="img/Plastic recycling.png" alt="plastic">
-                        <h3>Organic &<br>Recycled<br>Materials</h3>
+                <?php foreach ($promises as $p): ?>
+                    <div class="promise-item">
+                    <img src="<?= $p['img'] ?>" alt="Promise image">
+                    <h3><?= $p['title'] ?></h3>
                     </div>
-                    <div>
-                        <img src="img/Factory.png" alt="production">
-                        <h3>Smarter<br>Production</h3>
-                    </div>
-                    <div>
-                        <img src="img/Eco car.png" alt="ecocar">
-                        <h3>Cleaner<br>Production</h3>
-                    </div>
-                    <div>
-                        <img src="img/Sustainable.png" alt="packaging">
-                        <h3>Eco-Friendly<br>Packaging</h3>
-                    </div>
+                <?php endforeach; ?>
                 </div>
+
                 <img id = "leftbottomleaves" src="img/Left Bottom Leaf.png" alt="leftbottomleaves">
                 <img id = "rightbottomleaves" src="img/Right Bottom Leaf.png" alt="rightbottomleaves">
                 <div id = "slogan">Together<br>We can walk a little lighter on the planet.</div>
