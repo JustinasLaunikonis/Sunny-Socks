@@ -1,3 +1,18 @@
+<?php
+    $hour = (int)date('H');
+
+    
+    if ($hour >= 5 && $hour < 12){
+        $logo = '../../assets/illustraties/png/Sunny_socks_Blue.png'; //morning
+    } elseif ($hour >= 12 && $hour < 17) {
+        $logo = '../../assets/illustraties/png/Sunny_socks_Green.png'; //afternoon
+    } elseif ($hour >= 17 && $hour < 20) {
+        $logo = '../../assets/illustraties/png/Sunny_socks_Orange.png'; //evening
+    } else {
+        $logo = '../../assets/illustraties/png/Sunny_socks_Pink.png'; //night
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,28 +20,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
     <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="<?php echo $logo; ?>">
 
     <link rel="stylesheet" href="../../components/footer/footer.css">
     <link rel="stylesheet" href="../../components/footer/footer_blue.css">
 
     <link rel="stylesheet" href="../../components/header/header.css">
     <link rel="stylesheet" href="../../components/header/header_blue.css">
+
+    <link rel="stylesheet" href="../theme/darkmode.css">
 </head>
 <body>
-    <header>
-        <div class="header-pattern"></div>
-        <nav class="header-nav-items">
-            <a href="#" class="header-nav-link">Products</a>
-            <a href="#" class="header-nav-link">About</a>
-            <a href="../home_page/home.html" class="header-logo" aria-label="Home">
-                <img src="../../assets/Logos/png/sunny_logos-01.png" alt="Sunny Socks Logo">
-            </a>
-            <a href="#" class="header-nav-link">Sustainable</a>
-            <a href="#" class="header-nav-link">Contact</a>
-            <a href="#" class="header-nav-link"><marquee behavior="scroll" direction="left">🌱 Join Our Going Green Campaign - Sustainable Socks for a Better Future! 🌱</marquee></a>
-        </nav>
-        <a href="../campaign_page/campaign.html" class="header-additional-element"></a>
-    </header>
+    <?php include '../../components/header/header.php'; ?>
     <main>
         <div class="content">
             <div id = "greybg">
@@ -46,13 +51,13 @@
                 <h1>Ready to find socks that make you smile?</h1>
                 <img  src="img/Sun Icon.png" alt="sun image">
                 <h2>Then don’t lose time in buying your sole-mates!</h2>
-                <a href="../product_page/product.html">
+                <a href="../product_page/product.php">
                     <div id="productbutton"></div>
                     <div id="productbuttoninside">
                         <h2>View Our Products!</h2>
                     </div>
                 </a>
-                <a href="../campaign_page/campaign.html">
+                <a href="../campaign_page/campaign.php">
                     <div id="campaignbutton"></div>
                     <div id="campaignbuttoninside">
                         <h2>Have a peek at our campaign!</h2>
@@ -66,7 +71,7 @@
                 </div>
                 <div id = "greybg2">
                     <h2>More than socks<br>We are a movement of <b>joy</b>,<br> <b>color</b> and <b>fairness</b></h2>
-                    <a href="../about_us_page/about_us.html">
+                    <a href="../about_us_page/about_us.php">
                         <div id="aboutusbutton"></div>
                         <div id="aboutusbuttoninside">
                         <h2>Read more</h2>
@@ -96,47 +101,8 @@
 
         </div>
     </main>
-    <footer>
-        <div class="footer-pattern"></div>
-        <div class="footer-content">
-            <div class="footer-left">
-                <a href="../home_page/home.html" class="footer-link">
-                    <img class="footer-logo" src="../../assets/Logos/svg/sunny_logos_white.svg" alt="Sunny Socks logo">
-                </a>
-                <nav class="footer-page-linkers" aria-label="Footer">
-                    <a href="#" class="footer-link">Products Overview</a>
-                    <a href="#" class="footer-link">Sustainability</a>
-                    <a href="#" class="footer-link">Contacts</a>
-                    <a href="#" class="footer-link">About Us</a>
-                    <a href="#" class="footer-link">Campaign</a>
-                </nav>
-            </div>
-
-            <div class="footer-divider" aria-hidden="true"></div>
-
-            <div class="footer-right">
-                <h2 class="footer-contact-info">Contact</h2>
-                <ul class="footer-contact-list">
-                    <li class="footer-contact-item">
-                        <a class="footer-contact-link" href="#">+31 (0)123 456 789</a>
-                        <div class="footer-contact-icon footer-icon-phone" aria-hidden="true"></div>
-                    </li>
-                    <li class="footer-contact-item">
-                        <a class="footer-contact-link" href="#">+31 (0)123 456 789</a>
-                        <div class="footer-contact-icon footer-icon-whatsapp" aria-hidden="true"></div>
-                    </li>
-                    <li class="footer-contact-item">
-                        <a class="footer-contact-link" href="#">info@sunny.nl</a>
-                        <div class="footer-contact-icon footer-icon-email" aria-hidden="true"></div>
-                    </li>
-                    <li class="footer-contact-item footer-contact-item-address">
-                        <div class="footer-contact-address">Van Schaikweg 94,<br> 7811 KL Emmen</div>
-                        <div class="footer-contact-icon footer-icon-location" aria-hidden="true"></div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-copyright" role="contentinfo">Copyright &#169; 2025 Website_Project1</div>
-    </footer>
+    
+<script src="../theme/darkmode.js"></script>
+    <?php include "../../components/footer/footer.php"; ?>
 </body>
 </html>

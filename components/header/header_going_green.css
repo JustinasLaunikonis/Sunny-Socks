@@ -6,3 +6,7 @@ header { background: #51B2A2; }
 .header-nav-items a:nth-child(5) { color: #ffffff; }
 
 .header-nav-items a:nth-child(6) { display: none; }
+
+.header-additional-element {
+    position: fixed; /* no clue why this fixes the page alignment but ok*/
+}

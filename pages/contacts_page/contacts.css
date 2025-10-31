@@ -12,7 +12,12 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+
+    --header-offset: clamp(150px, 25vh, 170px);
 }
+
+header { z-index: 10000; }
+main{ margin-top: var(--header-offset); }
 
 .Messaging_Topper {
     width: 92vw;
@@ -325,6 +330,7 @@ body {
     background: #E990B9;
     margin: 0% auto;
     margin-top: 6.3vh;
+    margin-bottom: 60px;
 }
 
 .pink-box-text {

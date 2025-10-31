@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" text="text/css" href="contacts.css">
-    <title>Document</title>
+    <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/illustraties/png/Sunny_socks_Green.png">
+
+    <link rel="stylesheet" href="../../components/footer/footer.css">
+    <link rel="stylesheet" href="../../components/footer/footer_pink.css">
+
+    <link rel="stylesheet" href="../../components/header/header.css">
+    <link rel="stylesheet" href="../../components/header/header_pink.css">
 </head>
 <body>
+    <?php include '../../components/header/header.php'; ?>
     <main>
         <div>
             <img src="../../assets/Contact Page Assets/Messaging_Topper.png" alt="Messaging_Topper" class="Messaging_Topper">
@@ -90,5 +98,6 @@
             </div>
         </div>
     </main>
+    <?php include "../../components/footer/footer.php"; ?>
 </body>
 </html>

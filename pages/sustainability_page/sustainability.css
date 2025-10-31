@@ -1,6 +1,6 @@
 @font-face {
     font-family:"Nexa" ;
-    src: url("../../assets/Fonts/Nexa\ Light.otf");
+    src: url("../../assets/Fonts/Nexa/Light.otf");
 }
 * {
   margin: 0;
@@ -11,14 +11,34 @@ body{
     margin: 0;
     font-family: "Nexa";
     text-align: center;
+
+    /* Made page use a column flex layout, now footer can be at the bottom - JL */
+    display: flex;
+    flex-direction: column;
+
+    /* CSS variable to offset content below header - JL*/
+    --header-offset: clamp(110px, 9vh, 120px);
+
+    overflow-x: hidden;
 }
+
+/* Header appears at the very top at all times - JL */
+header { z-index: 10000; }
+
 div{
     display: flex;
     align-items: center;
     justify-content: center;
-    
-
 }
+
+/* Prevents footer from overlapping with content. - JL */
+main::after {
+    content: "";
+    display: block;
+
+    height: calc(130vw + var(--header-offset));
+}
+
 .content{
     margin-top:10rem;
 }

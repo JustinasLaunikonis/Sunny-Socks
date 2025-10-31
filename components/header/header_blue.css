@@ -18,18 +18,18 @@ header { background: #1E407A; }
 
 /* Campaign navigation image */
 .header-additional-element {
-    position: absolute;
+    position: fixed;
     width: 285px;
     height: 225px;
     right: -55px;
-    top: clamp(116.5px, 15vh, 130px);
+    top: clamp(80px, 16vh, 130px);
 
     background-image: url("../../assets/header/campaign_button.png"); 
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
     
-    overflow: hidden;
+    overflow: visible;
     z-index: 9999;
     transition: background-image 0.3s ease-in-out;
 

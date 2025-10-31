@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sustainability.css">
     <title>Sustainability page</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/illustraties/png/Sunny_socks_Green.png">
+
+     <link rel="stylesheet" href="../theme/darkmode.css">
+
+    <link rel="stylesheet" href="../../components/footer/footer.css">
+    <link rel="stylesheet" href="../../components/footer/footer_green.css">
+
+    <link rel="stylesheet" href="../../components/header/header.css">
+    <link rel="stylesheet" href="../../components/header/header_green.css">
 </head>
 <body>
+    <?php include '../../components/header/header.php'; ?>
     <main>
-        <header>
-
-        </header>
-
         <div class="content">
             <div id = "greysquare">
                 <div id ="greencircle">
@@ -40,16 +46,16 @@
                     <img id = "jobs" src="img/Nice Jobs Card.png" alt="jobs">
                     <img id = "jobs1" src="img/Front_Card_Nice_Jobs.png" alt="jobs">
                 </div>
-                <img id = "endimg" src="img/Bottom Pattern 50% Alpha.png" alt="endimg">
+                <img id = "endimg" src="img/BottomPatern.png" alt="endimg">
                 <img id = "endgoal" src="img/End_Goal.png" alt="endgoal">
                 <div id="endheader">All this to ensure one goal</div>
                 <div id="endtext"><p><u>Sustainable</u> High-Quality Socks For A <u> Fair Price</u></p></div>
             </div>
         </div>
-
-        <footer>
-
-        </footer>
     </main>
+    
+    <?php include "../../components/footer/footer.php"; ?>
+     <script src="../theme/darkmode.js"></script>
+
 </body>
 </html>
