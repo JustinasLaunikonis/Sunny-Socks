@@ -53,7 +53,10 @@ body {
 
 /* Header appears at the very top at all times - JL */
 header { z-index: 10000; }
-main{ margin-top: var(--header-offset); }
+main{
+    margin-top: var(--header-offset); 
+    overflow-x: hidden;
+}
 
 h1 {
     color: var(--red);
@@ -197,6 +200,10 @@ img {
     border-radius: 50%;
     border: var(--swatch-border);
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.color_buttons label:hover{
+    transform: scale(1.1);
 }
  /* Swatch colors setup */
 .blue {
