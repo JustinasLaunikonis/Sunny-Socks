@@ -17,7 +17,7 @@ body{
     flex-direction: column;
 
     /* CSS variable to offset content below header - JL*/
-    --header-offset: clamp(110px, 9vh, 120px);
+    --header-offset: clamp(100px, 7vh, 110px);
 
     overflow-x: hidden;
 }
@@ -25,22 +25,17 @@ body{
 /* Header appears at the very top at all times - JL */
 header { z-index: 10000; }
 
-div{
+main div{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 /* Prevents footer from overlapping with content. - JL */
 main::after {
     content: "";
     display: block;
 
-    height: calc(130vw + var(--header-offset));
-}
-
-.content{
-    margin-top:10rem;
+    height: calc(150vw + var(--header-offset));
 }
 #head{
     position:absolute;
@@ -52,7 +47,7 @@ main::after {
     transform: rotate(-45deg);
 }
 #greysquare{
-    top:15vw;
+    top:calc(15vw + var(--header-offset));
     background-color: rgb(217,217,217,100%);
     position:absolute;
     height:22vw;
@@ -92,7 +87,7 @@ main::after {
     height:80vw;
     width:80vw;
     border-radius: 40vw;
-    top:38vw;
+    top:calc(38vw + var(--header-offset));
 }
 #mainpart h1{
     position:absolute;
@@ -144,6 +139,7 @@ main::after {
     top:7vw;
     left:5vw;
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
 #sustainability1:hover{
     opacity:100;
@@ -161,6 +157,7 @@ main::after {
     width:20vw;
     top:7vw;
     opacity:0;
+    transition: opacity 0.3s ease;
 }
 #environment1:hover{
     opacity:100;
@@ -179,6 +176,7 @@ main::after {
     top:7vw;
     right:5vw;
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
 #wages1:hover{
     opacity:100;
@@ -197,6 +195,7 @@ main::after {
     top:40vw;
     left:17.5vw;
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
 #profit1:hover{
     opacity:100;
@@ -215,6 +214,7 @@ main::after {
     top:40vw;
     right:17.5vw;
     opacity:0;
+    transition: opacity 0.3s ease;
 }
 #jobs1:hover{
     opacity:100;
@@ -258,3 +258,55 @@ u{
 }
 
 
+@media (max-width: 992px) {
+    body { --header-offset: clamp(190px, 17vh, 200px); }
+    
+    /*increase card sizes for mobile*/
+    #environment,
+    #environment1,
+    #sustainability,
+    #sustainability1,
+    #wages,
+    #wages1,
+    #profit,
+    #profit1,
+    #jobs,
+    #jobs1 {
+        height: 45vw;
+        width: 30vw;
+        top: 8vw;
+    }
+
+    #sustainability,
+    #sustainability1 { left: -5vw; }
+    
+    #wages,
+    #wages1 { right: -5vw; }
+    
+    #profit,
+    #profit1 {
+        top: 55vw;
+        left: 10vw;
+    }
+    
+    #jobs,
+    #jobs1 {
+        top: 55vw;
+        right: 10vw;
+    }
+    
+    #mainpart {
+        height: 108vw;
+        top: calc(38vw + var(--header-offset));
+    }
+    
+    #connectors { display: none; }
+    #topconector { display: none; }
+    
+    #endgoal { top: 103vw; }
+    #endimg { top: 106vw; }
+    #endheader { top: 104.25vw;}
+    #endtext { top: 127vw; }
+    
+    main::after { height: calc(185vw + var(--header-offset)); }
+}
