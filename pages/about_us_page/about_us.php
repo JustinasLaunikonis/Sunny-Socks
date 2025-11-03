@@ -1,4 +1,17 @@
+<?php
+$hour = (int)date('H');
 
+
+if ($hour >= 5 && $hour < 12) {
+    $logo = '../../assets/illustraties/png/Sunny_socks_Blue.png'; //morning
+} elseif ($hour >= 12 && $hour < 17) {
+    $logo = '../../assets/illustraties/png/Sunny_socks_Green.png'; //afternoon
+} elseif ($hour >= 17 && $hour < 20) {
+    $logo = '../../assets/illustraties/png/Sunny_socks_Orange.png'; //evening
+} else {
+    $logo = '../../assets/illustraties/png/Sunny_socks_Pink.png'; //night
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +20,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="about_us.css">
     <link rel="stylesheet" href="../chatbot/bot-icon/jummy.css">
-    <title>About Us Page</title><link rel="icon" href="image/x-icon" href="../../assets/illustraties/png//Sunny_socks_Green.png">
+    <title>About Us Page</title>
+    <link rel="icon" type="image/x-icon" href="<?php echo $logo; ?>">
 
     <link rel="stylesheet" href="../theme/darkmode.css">
     

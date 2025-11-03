@@ -274,6 +274,8 @@ by hiding the rest initially */
     /* Aesthetic properties */
     border-radius: 50%;
     cursor: pointer;
+    
+    transition: transform 0.3s ease;
 }
 
 /* Added by Justinas */
@@ -401,4 +403,36 @@ by hiding the rest initially */
 .Stripes:has(#st_yellow:checked) .stripes_socks_yellow, 
 .Stripes:has(#st_yellow:checked) .stripes_yellow {
     display: block;
+}
+
+@media (max-width: 992px) {
+    :root { --header-offset: clamp(200px, 25vh, 280px); }
+}
+
+@media (max-width: 750px) {
+    :root {
+        --swatch-size: 50px; /* Smaller swatches */
+        --swatch-border: 5px solid white; /* Thinner border */
+    }
+
+    img { max-height: 155px; }
+
+    .Unicolor, .Stripes {
+        gap: 1rem;
+        padding-inline: 1.5rem;
+        width: 120vw;
+        left: -10vw;
+    }
+
+    .Uni_text, .Stripes_Text {
+        gap: 1rem;
+        max-width: 90%;
+    }
+
+    .Uni_imgs, .Stripes_Imgs { gap: 1rem; }
+
+    .color_buttons {
+        justify-content: center;
+        gap: 0.5rem;
+    }
 }
