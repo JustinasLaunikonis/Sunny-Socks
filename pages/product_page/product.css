@@ -1,5 +1,21 @@
+
+/*--------------------------------------------------------
+      CSS COMMENT LEGEND
+      ------------------
+      " Display setups "       → layout and flex/grid configurations
+      " Aesthetic properties " → colors, typography, and visuals
+      " Positioning "          → placement and z-index layering
+      " Measurements "         → widths, heights, padding, margins
+      " Animations "           → motion or transitions
+      " Other Legends "        → for more specific functionalities
+--------------------------------------------------------*/
+
 /*--------------------------------------------------------
             1. Base / Variables Storage (resets)
+
+    Includes base resets and font imports for global 
+   consistency. Also stores core color variables, spacing 
+   constants, and other reusable design tokens.
 --------------------------------------------------------*/
 
 /* Imports */
@@ -15,7 +31,7 @@
 
 /* Resets */
 :root {
-    /* Color variables */
+    /* Color variables (brand palette) */
     --blue: #1E407A;
     --green: #51B2A2;
     --pink: #E990B9;
@@ -32,7 +48,7 @@
     --main-spacing: 3.75rem;
     --gap-spacing: 1.875rem;
 
-    /* Special sizings for rotation porposes */
+    /* Custom rotation */
     --angle: 5deg;
     --negative-angle: -5deg;
     --extra: calc((1 - cos(var(--angle))) * 50vw);
@@ -43,86 +59,112 @@
 
 /*--------------------------------------------------------
       2. General Properties (body) / Page Title
+
+    Defines the overall page setup including global 
+   layout behavior, font settings, color defaults, 
+   and main structural grid configuration.
 --------------------------------------------------------*/
 
 body {
+    /* Measurements */
     margin: 0;
+
+    /* Aesthetic properties */
     font-family: "Nexa";
     text-align: center;
 }
 
 /* Header appears at the very top at all times - JL */
-header { z-index: 10000; }
-main{
-    margin-top: var(--header-offset); 
-    overflow-x: hidden;
+header { 
+    z-index: 10000; 
 }
 
-h1 {
-    color: var(--red);
-    margin-block: var(--main-spacing);
+.MainContainer{
+    /* Measurements */
+    margin-top: var(--header-offset); 
+
+    /* Preventing horizontal scrollbar */
+    overflow-x: hidden;
 }
 
 /*--------------------------------------------------------
                  3. Layout Containers
+
+    Defines structural flexbox containers and section 
+   groupings for product presentation and content 
+   alignment.
 --------------------------------------------------------*/
 
 .content {
-    width: 100vw;
-    overflow: hidden;
+    /* Positioning */
     position: relative;
+
+    /* Measurements */
+    width: 100vw;
+
+    /* Aesthetic properties */
+    overflow: hidden;
+    
     /* This padding measurement is in view width so it
     doesn't change with the height but with the width of
     the screen */
-    padding-block: 5vw;
+    padding-block: 4.4vw;
+}
+
+h1 {
+    /* Aesthetic properties */
+    color: var(--red);
+
+    /* Measurements */
+    margin-block: var(--main-spacing);
 }
 
 /* Unicolor and Stripes Section */
 .Unicolor, .Stripes {
-    /* Display and centering content */
+    /* Display setups */
     display: flex;
+
+    /* Aesthetic properties */
+    background-color: var(--red);
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+    /* Measurements */
     gap: var(--gap-spacing);
     padding-block: var(--gap-spacing);
     padding-inline: var(--main-spacing);
-    /* Other Details */
-    background-color: var(--red);
-    /* Properties related to eliminating white spaces on the sides*/
+    width: 110vw; /* Is above browser space to justify rotation */
+
+    /* Positioning */
     position: relative;
     left: -5vw;
-    width: 110vw;
 }
 
 .Unicolor {
+    /* Aesthetic properties */
     transform: rotate(var(--angle));
-    /* This margin is specific because of testings I did
-    which gave the perfect result in this sizing */
-    margin-bottom: 8.8vw;
+
+    /* Measurements */
+    margin-bottom: 8.8vw; /* Adjusted value experimentally for optimal 
+                            spacing between Unicolor and Stripes*/
 }
 
 .Stripes {
+    /* Aesthetic properties */
     transform: rotate(var(--negative-angle));
 }
 
-.Uni_imgs, .Stripes_Imgs {
-    display: flex;
-    gap: var(--gap-spacing);
-}
-
-.Uni_imgs {
-    /* Changing the order on the flexbox so the text show at the left */
-    order: 1;
-}
-
 .Uni_text, .Stripes_Text {
+    /* Display Setups */
     display: flex;
+
+    /* Aesthetic properties */
     flex-direction: column;
-    gap: var(--gap-spacing);
     color: white;
-    /* Max-width measurement extracted from Figma design
-    to limitate expansion of the boxes */
+
+    /* Measurements */
+    gap: var(--gap-spacing);
     max-width: 564px;
 }
 
@@ -131,18 +173,39 @@ h1 {
     order: 2;
 }
 
+.Uni_imgs, .Stripes_Imgs {
+    /* Display setups */
+    display: flex;
+
+    /* Measurements */
+    gap: var(--gap-spacing);
+}
+
+.Uni_imgs {
+    /* Changing the order on the flexbox so the text show at the left */
+    order: 1;
+}
+
 /*--------------------------------------------------------
                       4. Images
+
+    Styles product images and handles default visibility 
+   for color variations.
 --------------------------------------------------------*/
 
 /* General images properties changes */
 img {
+    /* Measurements */
     max-height: 282px;
+
+    /* Aesthetic properties */
     border-radius: var(--radius);
 }
 
-/* Unicolor Section*/
-/* Making both blue versions of the image the default ones */
+/* -- Unicolor Section -- */
+
+/* Making both blue versions of the image the default ones
+by hiding the rest initially */
 .uni_display {
     display: none;
 }
@@ -160,8 +223,10 @@ img {
     display: block;
 }
 
-/* Stripes Section*/
-/* Making both blue versions of the image the default ones */
+/* -- Stripes Section -- */
+
+/* Making both blue versions of the image the default ones
+by hiding the rest initially */
 .stripes_display {
     display: none;
 }
@@ -181,10 +246,16 @@ img {
 
 /*--------------------------------------------------------
                  5. Buttons (Swatches)
+
+    Creates circular color swatches, manages hover 
+   animations and selection visuals.
 --------------------------------------------------------*/
 
 .color_buttons {
+    /* Display setups */
     display: flex;
+
+    /* Aesthetic properties */
     justify-content: space-between;
 }
 
@@ -195,16 +266,24 @@ img {
 
 /* Styling of the buttons which in this case are the labels */
 .color_buttons label {
+    /* Measurements */
     width: var(--swatch-size);
     height: var(--swatch-size);
-    border-radius: 50%;
     border: var(--swatch-border);
+
+    /* Aesthetic properties */
+    border-radius: 50%;
     cursor: pointer;
+    
     transition: transform 0.3s ease;
 }
+
+/* Added by Justinas */
 .color_buttons label:hover{
+    /* Animation */
     transform: scale(1.1);
 }
+
  /* Swatch colors setup */
 .blue {
     background-color: var(--blue);
@@ -227,12 +306,16 @@ img {
 }
 
 /*--------------------------------------------------------
-                 6. interactivity
+                 6. Interactivity
+
+    Controls product color changes using the :has() 
+   selector to dynamically toggle image visibility 
+   based on selected swatch.
 --------------------------------------------------------*/
 
 /* Hiding images and bringing them when selected */
 
-/* Unicolor Green Selection */
+/* -- Unicolor Green Selection -- */
 .Unicolor:has(#green:checked) .uni_display, 
 .Unicolor:has(#green:checked) .uni_packaging {
     display: none;
@@ -243,7 +326,7 @@ img {
     display: block;
 }
 
-/* Unicolor Pink Selection */
+/* -- Unicolor Pink Selection -- */
 .Unicolor:has(#pink:checked) .uni_display, 
 .Unicolor:has(#pink:checked) .uni_packaging {
     display: none;
@@ -254,7 +337,7 @@ img {
     display: block;
 }
 
-/* Unicolor Red Selection */
+/* -- Unicolor Red Selection -- */
 .Unicolor:has(#red:checked) .uni_display, 
 .Unicolor:has(#red:checked) .uni_packaging {
     display: none;
@@ -265,7 +348,7 @@ img {
     display: block;
 }
 
-/* Unicolor Yellow Selection */
+/* -- Unicolor Yellow Selection -- */
 .Unicolor:has(#yellow:checked) .uni_display,
 .Unicolor:has(#yellow:checked) .uni_packaging {
     display: none;
@@ -278,7 +361,7 @@ img {
 
 /* ------------------------------------------------ */
 
-/* Stripes Green Selection */
+/* -- Stripes Green Selection -- */
 .Stripes:has(#st_green:checked) .stripes_display, 
 .Stripes:has(#st_green:checked) .stripes_packaging {
     display: none;
@@ -289,7 +372,7 @@ img {
     display: block;
 }
 
-/* Stripes Pink Selection */
+/* -- Stripes Pink Selection -- */
 .Stripes:has(#st_pink:checked) .stripes_display, 
 .Stripes:has(#st_pink:checked) .stripes_packaging {
     display: none;
@@ -300,7 +383,7 @@ img {
     display: block;
 }
 
-/* Stripes Red Selection */
+/* -- Stripes Red Selection -- */
 .Stripes:has(#st_red:checked) .stripes_display, 
 .Stripes:has(#st_red:checked) .stripes_packaging {
     display: none;
@@ -311,7 +394,7 @@ img {
     display: block;
 }
 
-/* Stripes Yellow Selection */
+/* -- Stripes Yellow Selection -- */
 .Stripes:has(#st_yellow:checked) .stripes_display, 
 .Stripes:has(#st_yellow:checked) .stripes_packaging {
     display: none;
@@ -320,4 +403,36 @@ img {
 .Stripes:has(#st_yellow:checked) .stripes_socks_yellow, 
 .Stripes:has(#st_yellow:checked) .stripes_yellow {
     display: block;
+}
+
+@media (max-width: 992px) {
+    :root { --header-offset: clamp(200px, 25vh, 280px); }
+}
+
+@media (max-width: 750px) {
+    :root {
+        --swatch-size: 50px; /* Smaller swatches */
+        --swatch-border: 5px solid white; /* Thinner border */
+    }
+
+    img { max-height: 155px; }
+
+    .Unicolor, .Stripes {
+        gap: 1rem;
+        padding-inline: 1.5rem;
+        width: 120vw;
+        left: -10vw;
+    }
+
+    .Uni_text, .Stripes_Text {
+        gap: 1rem;
+        max-width: 90%;
+    }
+
+    .Uni_imgs, .Stripes_Imgs { gap: 1rem; }
+
+    .color_buttons {
+        justify-content: center;
+        gap: 0.5rem;
+    }
 }

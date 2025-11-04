@@ -144,6 +144,7 @@ main::after {
     height: 23vw;
     width: auto;
     opacity:0;
+    transition: opacity 0.3s ease;
 }
 
 .img2, .img3 {
@@ -191,6 +192,7 @@ main::after {
     height: 23vw;
     width: auto;
     opacity:0;
+    transition: opacity 0.3s ease;
 }
 
 .img44:hover, 
@@ -221,6 +223,7 @@ main::after {
     height: 23vw;
     width: auto;
     opacity:0;
+    transition: opacity 0.3s ease;
 }
 
 .img6, .img7 {
