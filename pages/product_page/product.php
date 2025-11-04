@@ -1,16 +1,16 @@
 <?php
-    $hour = (int)date('H');
+$hour = (int)date('H');
 
-    
-    if ($hour >= 5 && $hour < 12){
-        $logo = '../../assets/illustraties/png/Sunny_socks_Blue.png'; //morning
-    } elseif ($hour >= 12 && $hour < 17) {
-        $logo = '../../assets/illustraties/png/Sunny_socks_Green.png'; //afternoon
-    } elseif ($hour >= 17 && $hour < 20) {
-        $logo = '../../assets/illustraties/png/Sunny_socks_Orange.png'; //evening
-    } else {
-        $logo = '../../assets/illustraties/png/Sunny_socks_Pink.png'; //night
-    }
+
+if ($hour >= 5 && $hour < 12) {
+    $logo = '../../assets/illustraties/png/Sunny_socks_Blue.png'; //morning
+} elseif ($hour >= 12 && $hour < 17) {
+    $logo = '../../assets/illustraties/png/Sunny_socks_Green.png'; //afternoon
+} elseif ($hour >= 17 && $hour < 20) {
+    $logo = '../../assets/illustraties/png/Sunny_socks_Orange.png'; //evening
+} else {
+    $logo = '../../assets/illustraties/png/Sunny_socks_Pink.png'; //night
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,157 +33,168 @@
 </head>
 
 <body>
+    
     <?php include '../../components/header/header.php'; ?>
-    <main>
-        <div Class="MainContainer">
 
-            <h1>Which team are you?</h1>
+    <div Class="MainContainer">
 
-            <div class="content">
+        <!-- Page Title -->
+        <h1>Which team are you?</h1>
 
-                <div class="Unicolor">
+        <!-- Main Content Wrapper -->
+        <div class="content">
 
-                    <div class="Uni_text">
+            <!-- UNICOLOR COLLECTION -->
+            <div class="Unicolor">
 
-                        <h2>Classic Unicolor</h2>
-                        <p>For the fans of simplisity and love for our color palette designs</p>
+                <!-- Text content and color selection controls -->
+                <div class="Uni_text">
 
-                        <div class="color_buttons">
+                    <h2>Classic Unicolor</h2>
+                    <p>For the fans of simplisity and love for our color palette designs</p>
 
-                            <!-- Blue Selector -->
-                            <input type="radio" id="blue" name="button" checked>
-                            <label for="blue" class="blue"></label>
+                    <!-- Color Selection (Unicolor) -->
+                    <div class="color_buttons">
 
-                            <!-- Green Selector -->
-                            <input type="radio" id="green" name="button">
-                            <label for="green" class="green"></label>
+                        <!-- Blue Selector -->
+                        <input type="radio" id="blue" name="button" checked>
+                        <label for="blue" class="blue"></label>
 
-                            <!-- Pink Selector -->
-                            <input type="radio" id="pink" name="button">
-                            <label for="pink" class="pink"></label>
+                        <!-- Green Selector -->
+                        <input type="radio" id="green" name="button">
+                        <label for="green" class="green"></label>
 
-                            <!-- Red Selector -->
-                            <input type="radio" id="red" name="button">
-                            <label for="red" class="red"></label>
+                        <!-- Pink Selector -->
+                        <input type="radio" id="pink" name="button">
+                        <label for="pink" class="pink"></label>
 
-                            <!-- Yellow Selector -->
-                            <input type="radio" id="yellow" name="button">
-                            <label for="yellow" class="yellow"></label>
+                        <!-- Red Selector -->
+                        <input type="radio" id="red" name="button">
+                        <label for="red" class="red"></label>
 
-                        </div>
-
-                    </div>
-
-                    <div class="Uni_imgs">
-
-                        <!-- Main Images -->
-                        <img class="uni_display uni_socks_blue"
-                            src="../../assets/Photo's/catalogus/Sunny_socks_uni_blue.jpg" alt="Uni_Blue">
-                        <img class="uni_display uni_socks_green"
-                            src="../../assets/Photo's/catalogus/Sunny_socks_uni_green.jpg" alt="Uni_Green">
-                        <img class="uni_display uni_socks_pink"
-                            src="../../assets/Photo's/catalogus/Sunny_socks_uni_pink.jpg" alt="Uni_Pink">
-                        <img class="uni_display uni_socks_red"
-                            src="../../assets/Photo's/catalogus/Sunny_socks_uni_red.jpg" alt="Uni_Red">
-                        <img class="uni_display uni_socks_yellow"
-                            src="../../assets/Photo's/catalogus/Sunny_socks_uni_yellow.jpg" alt="Uni_Yellow">
-
-                        <!-- Packaging Images -->
-                        <img class="uni_packaging uni_blue"
-                            src="../../assets/Photo's/packaging/png/catalogus_sokken_uni_blue.png"
-                            alt="Uni_Blue_Packaging">
-                        <img class="uni_packaging uni_green"
-                            src="../../assets/Photo's/packaging/png/catalogus_sokken_uni_green.png"
-                            alt="Uni_Green_Packaging">
-                        <img class="uni_packaging uni_pink"
-                            src="../../assets/Photo's/packaging/png/catalogus_sokken_uni_pink.png"
-                            alt="Uni_Pink_Packaging">
-                        <img class="uni_packaging uni_red"
-                            src="../../assets/Photo's/packaging/png/catalogus_sokken_uni_red.png"
-                            alt="Uni_Red_Packaging">
-                        <img class="uni_packaging uni_yellow"
-                            src="../../assets/Photo's/packaging/png/catalogus_sokken_uni_yellow.png"
-                            alt="Uni_Yellow_Packaging">
+                        <!-- Yellow Selector -->
+                        <input type="radio" id="yellow" name="button">
+                        <label for="yellow" class="yellow"></label>
 
                     </div>
 
                 </div>
 
-                <div class="Stripes">
+                <!-- Unicolor Images -->
+                <div class="Uni_imgs">
 
-                    <div class="Stripes_Text">
+                    <!-- Main Product Images -->
+                    <img class="uni_display uni_socks_blue"
+                        src="../../assets/Photo's/catalogus/Sunny_socks_uni_blue.jpg" alt="Uni_Blue">
+                    <img class="uni_display uni_socks_green"
+                        src="../../assets/Photo's/catalogus/Sunny_socks_uni_green.jpg" alt="Uni_Green">
+                    <img class="uni_display uni_socks_pink"
+                        src="../../assets/Photo's/catalogus/Sunny_socks_uni_pink.jpg" alt="Uni_Pink">
+                    <img class="uni_display uni_socks_red"
+                        src="../../assets/Photo's/catalogus/Sunny_socks_uni_red.jpg" alt="Uni_Red">
+                    <img class="uni_display uni_socks_yellow"
+                        src="../../assets/Photo's/catalogus/Sunny_socks_uni_yellow.jpg" alt="Uni_Yellow">
 
-                        <h2>Classic Stripes Color</h2>
-                        <p>For the bold ones with the wish of seeing their lives delined by happy colors</p>
+                    <!-- Packaging Images -->
+                    <img class="uni_packaging uni_blue"
+                        src="../../assets/Photo's/packaging/png/catalogus_sokken_uni_blue.png"
+                        alt="Uni_Blue_Packaging">
+                    <img class="uni_packaging uni_green"
+                        src="../../assets/Photo's/packaging/png/catalogus_sokken_uni_green.png"
+                        alt="Uni_Green_Packaging">
+                    <img class="uni_packaging uni_pink"
+                        src="../../assets/Photo's/packaging/png/catalogus_sokken_uni_pink.png"
+                        alt="Uni_Pink_Packaging">
+                    <img class="uni_packaging uni_red"
+                        src="../../assets/Photo's/packaging/png/catalogus_sokken_uni_red.png"
+                        alt="Uni_Red_Packaging">
+                    <img class="uni_packaging uni_yellow"
+                        src="../../assets/Photo's/packaging/png/catalogus_sokken_uni_yellow.png"
+                        alt="Uni_Yellow_Packaging">
 
-                        <div class="color_buttons">
+                </div>
 
-                            <!-- Blue Selector -->
-                            <input type="radio" id="st_blue" name="st_button" checked>
-                            <label for="st_blue" class="blue"></label>
+            </div>
 
-                            <!-- Green Selector -->
-                            <input type="radio" id="st_green" name="st_button">
-                            <label for="st_green" class="green"></label>
+            <!-- STRIPES COLLECTION -->
+            <div class="Stripes">
 
-                            <!-- Pink Selector -->
-                            <input type="radio" id="st_pink" name="st_button">
-                            <label for="st_pink" class="pink"></label>
+                <!-- Text content and color selection controls -->
+                <div class="Stripes_Text">
 
-                            <!-- Red Selector -->
-                            <input type="radio" id="st_red" name="st_button">
-                            <label for="st_red" class="red"></label>
+                    <h2>Classic Stripes Color</h2>
+                    <p>For the bold ones with the wish of seeing their lives delined by happy colors</p>
 
-                            <!-- Yellow Selector -->
-                            <input type="radio" id="st_yellow" name="st_button">
-                            <label for="st_yellow" class="yellow"></label>
+                    <!-- Color Selection (Stripes) -->
+                    <div class="color_buttons">
 
-                        </div>
+                        <!-- Blue Selector -->
+                        <input type="radio" id="st_blue" name="st_button" checked>
+                        <label for="st_blue" class="blue"></label>
 
-                    </div>
+                        <!-- Green Selector -->
+                        <input type="radio" id="st_green" name="st_button">
+                        <label for="st_green" class="green"></label>
 
-                    <div class="Stripes_Imgs">
+                        <!-- Pink Selector -->
+                        <input type="radio" id="st_pink" name="st_button">
+                        <label for="st_pink" class="pink"></label>
 
-                        <!-- Main Images -->
-                        <img class="stripes_display stripes_socks_blue"
-                            src="../../assets/Photo's/catalogus/Sunny_socks_blue.jpg" alt="Stripes_Blue">
-                        <img class="stripes_display stripes_socks_green"
-                            src="../../assets/Photo's/catalogus/Sunny_socks_green.jpg" alt="Stripes_Green">
-                        <img class="stripes_display stripes_socks_pink"
-                            src="../../assets/Photo's/catalogus/Sunny_socks_pink_01.jpg" alt="Stripes_Pink">
-                        <img class="stripes_display stripes_socks_red"
-                            src="../../assets/Photo's/catalogus/Sunny_socks_red.jpg" alt="Stripes_Red">
-                        <img class="stripes_display stripes_socks_yellow"
-                            src="../../assets/Photo's/catalogus/Sunny_socks_yellow.jpg" alt="Stripes_Yellow">
+                        <!-- Red Selector -->
+                        <input type="radio" id="st_red" name="st_button">
+                        <label for="st_red" class="red"></label>
 
-                        <!-- Packaging Images -->
-                        <img class="stripes_packaging stripes_blue"
-                            src="../../assets/Photo's/packaging/png/catalogus_sokken_stripes_blue.png"
-                            alt="Stripes_Blue_Packaging">
-                        <img class="stripes_packaging stripes_green"
-                            src="../../assets/Photo's/packaging/png/catalogus_sokken_stripes_green.png"
-                            alt="Stripes_Green_Packaging">
-                        <img class="stripes_packaging stripes_pink"
-                            src="../../assets/Photo's/packaging/png/catalogus_sokken_stripes_pink.png"
-                            alt="Stripes_Pink_Packaging">
-                        <img class="stripes_packaging stripes_red"
-                            src="../../assets/Photo's/packaging/png/catalogus_sokken_uni_red.png"
-                            alt="Stripes_Red_Packaging">
-                        <img class="stripes_packaging stripes_yellow"
-                            src="../../assets/Photo's/packaging/png/catalogus_sokken_stripes_yellow.png"
-                            alt="Stripes_Yellow_Packaging">
+                        <!-- Yellow Selector -->
+                        <input type="radio" id="st_yellow" name="st_button">
+                        <label for="st_yellow" class="yellow"></label>
 
                     </div>
 
                 </div>
+
+                <!-- Stripes Images -->
+                <div class="Stripes_Imgs">
+
+                    <!-- Main Product Images -->
+                    <img class="stripes_display stripes_socks_blue"
+                        src="../../assets/Photo's/catalogus/Sunny_socks_blue.jpg" alt="Stripes_Blue">
+                    <img class="stripes_display stripes_socks_green"
+                        src="../../assets/Photo's/catalogus/Sunny_socks_green.jpg" alt="Stripes_Green">
+                    <img class="stripes_display stripes_socks_pink"
+                        src="../../assets/Photo's/catalogus/Sunny_socks_pink_01.jpg" alt="Stripes_Pink">
+                    <img class="stripes_display stripes_socks_red"
+                        src="../../assets/Photo's/catalogus/Sunny_socks_red.jpg" alt="Stripes_Red">
+                    <img class="stripes_display stripes_socks_yellow"
+                        src="../../assets/Photo's/catalogus/Sunny_socks_yellow.jpg" alt="Stripes_Yellow">
+
+                    <!-- Packaging Images -->
+                    <img class="stripes_packaging stripes_blue"
+                        src="../../assets/Photo's/packaging/png/catalogus_sokken_stripes_blue.png"
+                        alt="Stripes_Blue_Packaging">
+                    <img class="stripes_packaging stripes_green"
+                        src="../../assets/Photo's/packaging/png/catalogus_sokken_stripes_green.png"
+                        alt="Stripes_Green_Packaging">
+                    <img class="stripes_packaging stripes_pink"
+                        src="../../assets/Photo's/packaging/png/catalogus_sokken_stripes_pink.png"
+                        alt="Stripes_Pink_Packaging">
+                    <img class="stripes_packaging stripes_red"
+                        src="../../assets/Photo's/packaging/png/catalogus_sokken_uni_red.png"
+                        alt="Stripes_Red_Packaging">
+                    <img class="stripes_packaging stripes_yellow"
+                        src="../../assets/Photo's/packaging/png/catalogus_sokken_stripes_yellow.png"
+                        alt="Stripes_Yellow_Packaging">
+
+                </div>
+
             </div>
         </div>
+    </div>
 
 
-        <?php include "../../components/footer/footer.php"; ?>
+    <?php include "../../components/footer/footer.php"; ?>
 
-        <script src="../theme/darkmode.js"></script>
-    </main>
+    <script src="../theme/darkmode.js"></script>
+
 </body>
 
 </html>
