@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" text="text/css" href="contacts.css">
     <title>Contact</title>
+
+    <link rel="stylesheet" href="../theme/darkmode.css">
+
     <link rel="icon" type="image/x-icon" href="../../assets/illustraties/png/Sunny_socks_Green.png">
 
     <link rel="stylesheet" href="../../components/footer/footer.css">
@@ -40,12 +43,12 @@
         <section class="form-box">
             <form class="contact-form">
                 <div class="name-surname">
-                    <input type="text" id="name" class="name" name="name" placeholder="First Name">
-                    <input type="text" id="surname" class="surname" name="surname" placeholder="Surname">
+                    <input type="text" id="name" class="name" name="name" placeholder="First Name" required>
+                    <input type="text" id="surname" class="surname" name="surname" placeholder="Surname" required>
                 </div>
                 <div class="email-phone">
-                    <input type="text" id="email" class="email" name="email" placeholder="Email address">
-                    <input type="text" id="phone" class="phone" name="phone" placeholder="Phone number">
+                    <input type="email" id="email" class="email" name="email" placeholder="Email address">
+                    <input type="tel" id="phone" class="phone" name="phone" placeholder="Phone number" pattern="[0-9]{10}" required>
                 </div>
                 <div>
                     <input type="text" id="company" class="company" name="company" placeholder="Company name">
@@ -98,6 +101,7 @@
             </div>
         </div>
     </main>
+    <script src="../theme/darkmode.js"></script>
     <?php include "../../components/footer/footer.php"; ?>
 </body>
 </html>
