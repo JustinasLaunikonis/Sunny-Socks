@@ -6,6 +6,7 @@
     <link rel="stylesheet" text="text/css" href="contacts.css">
     <title>Contact</title>
 
+    <link rel="stylesheet" href="../chatbot/bot-icon/jummy.css">
     <link rel="stylesheet" href="../theme/darkmode.css">
 
     <link rel="icon" type="image/x-icon" href="../../assets/illustraties/png/Sunny_socks_Green.png">
@@ -41,7 +42,7 @@
                 </div>
             </div>
         <section class="form-box">
-            <form class="contact-form">
+            <form class="contact-form" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
                 <div class="name-surname">
                     <input type="text" id="name" class="name" name="name" placeholder="First Name" required>
                     <input type="text" id="surname" class="surname" name="surname" placeholder="Surname" required>
@@ -54,7 +55,7 @@
                     <input type="text" id="company" class="company" name="company" placeholder="Company name">
                 </div>
                 <div>
-                    <textarea name="message" id="message" class="message" name="message" placeholder="Your message"></textarea>
+                    <textarea name="message" id="message" class="message" name="message" placeholder="Your message" required></textarea>
                 </div>
                 <div class="form-text">
                     By continuing, you agree to our Terms and Privacy Policy.<br>
@@ -73,25 +74,30 @@
             <div class="contacts-right">
                 <div class="Contacts">Contacts!</div>
                 <ul class="contact-list">
-                    <li class="contact-item1"><a href="#" class="contact-link">+31 (0)123 456 789</a>
+                    <li class="contact-item1">
+                        <a class="contact-link" href="../404Error_page/404Error_page.php">+31 (0)123 456 789</a>
                         <img src="../../assets/Contact Page Assets/Phone_Bold.png" alt="Phone-Bold" class="Phone-Bold">
                     </li>
-                    <li class="contact-item2"><a href="#" class="contact-link">+31 (0)123 456 789</a>
+                    <li class="contact-item2">
+                        <a class="contact-link" href="../404Error_page/404Error_page.php">+31 (0)123 456 789</a>
                         <img src="../../assets/Contact Page Assets/Whatsapp_Bold.png" alt="Whatsapp-Bold" class="Whatsapp-Bold">
                     </li>
-                    <li class="contact-item3"><a href="#" class="contact-link">info@sunny.nl</a>
+                    <li class="contact-item3">
+                        <a class="contact-link" href="../404Error_page/404Error_page.php">info@sunny.nl</a>
                         <img src="../../assets/Contact Page Assets/Email_Bold.png" alt="Email-Bold" class="Email-Bold">
                     </li>
-                    <li class="contact-item4">Van Schaikweg 94,<br>7811 KL Emmen
+                    <li class="contact-item4">
+                        <a class="contact-link" href="https://maps.app.goo.gl/vc1R5YwyindMkw618" target="_blank">Schaikweg 94,<br>7811 KL Emmen</a>
                         <img src="../../assets/Contact Page Assets/Location_Bold.png" alt="Location-Bold" class="Location-Bold">
                     </li>
                 </ul>
                 <div class="contact-text">We are available by phone Monday through Friday from 8:30 a.m. to 5 p.m.</div>
                 <div class="Follow-Us">Follow Us!</div>
                 <div>
+                    <a class="contact-link" href="../404Error_page/404Error_page.php">
                     <img src="../../assets/Contact Page Assets/Linkdin_Button.png" alt="Linkdin-Button" class="Linkdin-Button">
                     <img src="../../assets/Contact Page Assets/Instagram_Button.png" alt="Instagram-Button" class="Instagram-Button">
-                    <img src="../../assets/Contact Page Assets/Facebook_Button.png" alt="Facebook-Button" class="Facebook-Button">
+                    <img src="../../assets/Contact Page Assets/Facebook_Button.png" alt="Facebook-Button" class="Facebook-Button"></a>
                 </div>
             </div>
         </section>
@@ -100,6 +106,9 @@
             Let's Sock and Roll!
             </div>
         </div>
+        <a href="../chatbot/chatbot.php" class="boticon">
+        <img src="../chatbot/bot-icon/jummy.png" alt="Sunny Socks Logo">
+         </a>
     </main>
     <script src="../theme/darkmode.js"></script>
     <?php include "../../components/footer/footer.php"; ?>
