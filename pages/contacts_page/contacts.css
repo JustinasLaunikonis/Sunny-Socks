@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Nexa";
-    src: url("..\assets\Fonts\Nexa Light.otf");
+    src: url("../../assets/Fonts/Nexa/Light.otf");
 }
 
 * {
@@ -168,6 +168,13 @@ main{ margin-top: var(--header-offset); }
     resize: none;
 }
 
+.name,
+.surname,
+.email,
+.phone,
+.company,
+.message { padding: 1.5vh 1vw; }
+
 .form-text {
     color: #FFFFFF;
     font-size: 1.4vw;
@@ -251,7 +258,10 @@ main{ margin-top: var(--header-offset); }
     font-size: 1.67vw;
     box-shadow: 0 0 0 0.5vw #FFFFFF;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
+.send-button:hover { transform: scale(1.05); }
 
 .contacts-right {
     display: flex;
@@ -319,10 +329,17 @@ main{ margin-top: var(--header-offset); }
     margin-bottom: 4vh;
 }
 
-.Linkdin-Button, .Instagram-Button, .Facebook-Button {
+.Linkdin-Button,
+.Instagram-Button,
+.Facebook-Button {
     height: 13vh;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
+.Linkdin-Button:hover,
+.Instagram-Button:hover,
+.Facebook-Button:hover { transform: scale(1.1); }
 
 .pink-box {
     height: 8vh;
@@ -344,4 +361,274 @@ main{ margin-top: var(--header-offset); }
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.message-container {
+    padding: 2vh 2vw;
+    margin: 4vh auto;
+    border-radius: 2vw;
+    max-width: 92vw;
+    font-weight: bold;
+    font-size: 1.4vw;
+}
+
+.error-message {
+    background-color: #ffebee;
+    border: 0.3vw solid #f44336;
+    color: #c62828;
+}
+
+.success-message {
+    background-color: #e8f5e9;
+    border: 0.3vw solid #4caf50;
+    color: #2e7d32;
+}
+
+.message-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.message-container li { margin: 1vh 0;}
+.message-container p { margin: 0; }
+
+@media (max-width: 992px) and (min-width: 768px) {
+    body { --header-offset: clamp(320px, 40vh, 350px); }
+
+    .blue-box-text {
+        font-size: 5vw;
+        -webkit-text-stroke: 0;
+    }
+
+    .grey-box { height: 18vh; }
+    .grey-box-text { font-size: 2.8vw; }
+
+    .form-box {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 4vh 5vw;
+        gap: 4vh;
+    }
+
+    .Divider {
+        width: 70%;
+        height: 0.5vw;
+        grid-row: 2;
+    }
+
+    .contacts-right { grid-row: 3; }
+
+    .name,
+    .surname,
+    .email,
+    .phone,
+    .company,
+    .message {
+        height: 7vh;
+        font-size: 1.8vw;
+    }
+
+    .message { height: 25vh; }
+
+    .form-text,
+    .subscribe-text,
+    .message-container{ font-size: 1.8vw;}
+
+    .send-button {
+        height: 10vh;
+        width: 18vw;
+        font-size: 2vw;
+    }
+
+    .Contacts {
+        font-size: 4vw;
+        margin-top: 2vh;
+    }
+
+    .contact-item1,
+    .contact-item2,
+    .contact-item3,
+    .contact-item4 { font-size: 2vw; }
+
+    .Phone-Bold,
+    .Whatsapp-Bold,
+    .Email-Bold,
+    .Location-Bold { height: 5vh; }
+
+    .contact-text {
+        font-size: 1.3vw;
+        margin-bottom: 6vh;
+    }
+
+    .Follow-Us { font-size: 4vw; }
+ 
+    .Linkdin-Button,
+    .Instagram-Button,
+    .Facebook-Button { height: 11vh; }
+
+    .message-container { border: 0.4vw solid; }
+}
+
+@media (max-width: 767px) {
+    body { --header-offset: clamp(220px, 27vh, 240px); }
+
+    .Messaging_Topper { width: 95vw;}
+    .Connector { width: 92vw; }
+
+    .blue-box {
+        width: 95vw;
+        min-height: clamp(200px, 35vh, 350px);
+        padding: 3vw;
+        border-radius: 5vw;
+    }
+
+    .blue-box-text {
+        font-size: 6vw;
+        -webkit-text-stroke: 0;
+    }
+
+    .Left_Smily_Icon,
+    .Right_Smily_Icon {
+        width: 15vw;
+        bottom: 4vw;
+    }
+
+    .Left_Smily_Icon { left: 3vw; }
+    .Right_Smily_Icon { right: 3vw; }
+
+    .Image_Connector { width: 35vw; }
+
+    .grey-box {
+        width: 95vw;
+        height: auto;
+        min-height: 15vh;
+        border-radius: 5vw;
+        padding: 3vh 4vw;
+    }
+
+    .grey-box-text { font-size: 3.5vw; }
+
+    /* single column layout for form */
+    .form-box {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 4vh 6vw;
+        gap: 5vh;
+        border-radius: 5vw 5vw 0 0;
+    }
+
+    .contact-form { gap: 3vh; }
+
+    .name-surname,
+    .email-phone {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .name-surname input,
+    .email-phone input { width: 100%; }
+
+    .name,
+    .surname,
+    .email,
+    .phone,
+    .company,
+    .message {
+        height: 7vh;
+        font-size: 4vw;
+        border-radius: 2vw;
+    }
+
+    .message { height: 20vh; }
+
+    .form-text {
+        font-size: 3.2vw;
+        margin-top: 1vh;
+    }
+
+    .subscribe-box { gap: 3vw; }
+
+    .cross {
+        width: 6vw;
+        height: 6vw;
+        border-radius: 1.5vw;
+    }
+
+    .cross::before,
+    .cross::after {
+        width: 0.3vw;
+        height: 3vw;
+    }
+
+    .subscribe-text { font-size: 3.2vw; }
+
+    /* horizontal divider */
+    .Divider {
+        width: 80%;
+        height: 1vw;
+        grid-row: 2;
+    }
+
+    .send-button {
+        height: 8vh;
+        width: 35vw;
+        font-size: 4.5vw;
+        border-radius: 2vw;
+        border: 1vw solid #E990B9;
+        outline-offset: 1vw;
+        box-shadow: 0 0 0 1vw #FFFFFF;
+    }
+
+    .contacts-right { grid-row: 3;}
+
+    .Contacts {
+        font-size: 7vw;
+        margin-bottom: 3vh;
+    }
+
+    .contact-list { font-size: 3.5vw; }
+
+    .contact-item1,
+    .contact-item2,
+    .contact-item3,
+    .contact-item4 {
+        font-size: 3.5vw;
+        margin-bottom: 2.5vh;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .Phone-Bold,
+    .Whatsapp-Bold,
+    .Email-Bold,
+    .Location-Bold { height: 6vh; }
+
+    .contact-text {
+        font-size: 2.8vw;
+        margin-bottom: 5vh;
+    }
+
+    .Follow-Us {
+        font-size: 7vw;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+
+    .Linkdin-Button,
+    .Instagram-Button,
+    .Facebook-Button,
+    .pink-box,
+    .pink-box-text { height: 10vh; }
+
+    .pink-box-text { font-size: 4vw; }
+
+    .message-container {
+        font-size: 3.5vw;
+        padding: 2.5vh 4vw;
+        border-radius: 3vw;
+        max-width: 95vw;
+        border: 0.6vw solid;
+    }
+
+    .message-container li { margin: 1.5vh 0; }
 }
