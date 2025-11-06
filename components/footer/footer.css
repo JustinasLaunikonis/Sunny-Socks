@@ -171,10 +171,10 @@ footer {
     background-repeat: no-repeat;
 }
 
-.footer-icon-phone    { background-image: url("../../assets/footer/Phone_Light\ Icon.svg"); }
-.footer-icon-whatsapp { background-image: url("../../assets/footer/WhatsApp_Light\ Icon.svg"); }
-.footer-icon-email    { background-image: url("../../assets/footer/Email_Light\ Icon.svg"); }
-.footer-icon-location { background-image: url("../../assets/footer/Location_Light\ Icon.svg"); }
+.footer-icon-phone    { background-image: url("../../assets/footer/phone_light.svg"); }
+.footer-icon-whatsapp { background-image: url("../../assets/footer/whatsapp_light.svg"); }
+.footer-icon-email    { background-image: url("../../assets/footer/email_light.svg"); }
+.footer-icon-location { background-image: url("../../assets/footer/location_light.svg"); }
 
 
 /* ----- Wider than a Phone Responsiveness ----- */
