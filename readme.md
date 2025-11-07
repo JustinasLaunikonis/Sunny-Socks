@@ -1,6 +1,7 @@
 # Group [TD-INF-IT1A] Webdevelopment and Design Project Overview
 
 [GitHub Repository](https://github.com/JustinasLaunikonis/Sunny-Socks)
+[OneDrive](https://newuniversity-my.sharepoint.com/:f:/g/personal/justinas_launikonis_student_nhlstenden_com/Er3L8JWgWQpIouMjnX92a5UB5-RlbZgnOStv9gNDexe6_A?e=PlD6S0)
 
 ## The Project Website: Sunny Socks
 We are developing a website for Sunny Socks to increase their brands digital presence. While the products and brand identity are already established, at the moment there is no online platform where customers can explore the brand story, mission, and their product. Sunny Socks is not just a sock brand, it is a brand focused on proving that positivity, color, and fairness can be designed to bring joy to everyday life. Therefore, the goal of this Project is to create a website that reflects their identity, be visually appealing, and user-friendly so that visitors understand what the brand stands for.
