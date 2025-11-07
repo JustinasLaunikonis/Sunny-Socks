@@ -8,6 +8,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = filter_input(INPUT_POST, "message", FILTER_SANITIZE_SPECIAL_CHARS);
     $subscribe = isset($_POST['subscribe-checkbox']) ? true : false; 
 }
+
+$hour = (int)date('H');
+
+    
+    if ($hour >= 5 && $hour < 12){
+        $logo = '../../assets/illustraties/png/Sunny_socks_Blue.png'; //morning
+    } elseif ($hour >= 12 && $hour < 17) {
+        $logo = '../../assets/illustraties/png/Sunny_socks_Green.png'; //afternoon
+    } elseif ($hour >= 17 && $hour < 20) {
+        $logo = '../../assets/illustraties/png/Sunny_socks_Orange.png'; //evening
+    } else {
+        $logo = '../../assets/illustraties/png/Sunny_socks_Pink.png'; //night
+    }
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" text="text/css" href="contacts.css">
     <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="<?php echo $logo; ?>">
 
     <link rel="stylesheet" href="../chatbot/bot-icon/jummy.css">
     <link rel="stylesheet" href="../theme/darkmode.css">
