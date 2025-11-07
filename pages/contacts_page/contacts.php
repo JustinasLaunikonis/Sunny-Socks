@@ -34,9 +34,7 @@ $hour = (int)date('H');
 
     <link rel="stylesheet" href="../chatbot/bot-icon/jummy.css">
     <link rel="stylesheet" href="../theme/darkmode.css">
-
-    <link rel="icon" type="image/x-icon" href="../../assets/illustraties/png/Sunny_socks_Green.png">
-
+    
     <link rel="stylesheet" href="../../components/footer/footer.css">
     <link rel="stylesheet" href="../../components/footer/footer_pink.css">
 
